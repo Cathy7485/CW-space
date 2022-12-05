@@ -1,0 +1,486 @@
+body
+	position: relative
+	#header
+		position: fixed
+		display: block
+		width: 100%
+		z-index: 8
+		.navbar
+			justify-content: space-between
+			align-items: center
+			padding-top: inherit
+			padding-bottom: 0
+			.inner
+				padding-left: 0
+				align-items: flex-start
+				transition: all 0.3s  cubic-bezier(.65,0,.35,1)
+				+desktop
+					padding-right: 0
+					align-items: center
+				+tablet-lanscape
+					padding-right: 0
+					align-items: center
+				+tablet-potiait
+					padding-right: 0
+					align-items: center
+				+iphone
+					padding-right: 0
+					align-items: center
+				+phone
+					padding-right: 0
+					align-items: center
+				.logo
+					position: relative
+					width: 154px
+					min-height: 173px
+					padding: 0
+					margin-top: 0
+					display: inline-block
+					background: url(../images/logo.jpg) no-repeat
+					background-size: contain
+					background-position: top left
+					transition: all 0.3s cubic-bezier(.65,0,.35,1)
+					text-indent: -9999px
+					+wide
+						width: 100px
+						height: 100px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					+desktop
+						width: 75px
+						height: 75px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					+tablet-lanscape
+						width: 75px
+						height: 75px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					+tablet-potiait
+						width: 75px
+						height: 75px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					+iphone
+						width: 75px
+						height: 75px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					+phone
+						width: 75px
+						height: 75px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						background-position: center
+						min-height: initial
+					.logo-link
+						border: 0
+						display: block
+						width: 154px
+						height: 173px
+						text-indent: -9999px
+						+wide
+							width: 100px
+							height: 100px
+						+desktop
+							width: 75px
+							height: 75px
+						+tablet-lanscape
+							width: 75px
+							height: 75px
+						+tablet-potiait
+							width: 75px
+							height: 75px
+						+iphone
+							width: 75px
+							height: 75px
+						+phone
+							width: 75px
+							height: 75px
+				button.navbar-toggler
+					border: none 
+					box-shadow: none
+					.navbar-toggler-icon
+						width: 48px
+						height: 48px
+						background-image: url(../images/navbar-toggler-icon.svg) 
+						background-size: contain
+		&.addBg
+			background: rgba(0,0,0,0.3)
+			height: 100px
+			transition: all 0.3s
+			+tablet-lanscape 
+				min-height: initial
+			+tablet-potiait 
+				min-height: initial
+			+iphone 
+				min-height: initial
+			+phone 
+				min-height: initial
+			.navbar
+				.inner
+					height: 100px
+					transition: all 0.3s cubic-bezier(.65,0,.35,1)
+					+tablet-lanscape 
+						height: initial
+					+tablet-potiait 
+						height: initial
+					+iphone 
+						height: initial
+					+phone 
+						height: initial
+					.logo
+						width: 100px
+						height: 100px
+						min-height: 100px
+						background: url(../images/logo-sm.jpg) no-repeat
+						background-size: contain
+						transition: all 0.3s cubic-bezier(.65,0,.35,1)
+						+tablet-lanscape
+							width: 75px
+							height: 75px
+						+tablet-potiait
+							width: 75px
+							height: 75px
+						+iphone
+							width: 75px
+							height: 75px
+						+phone
+							width: 75px
+							height: 75px
+					.logo-link
+						width: 100px
+						height: 100px
+						+tablet-lanscape
+							width: 75px
+							height: 75px
+							min-height: auto
+						+tablet-potiait
+							width: 75px
+							height: 75px
+							min-height: auto
+						+iphone
+							width: 75px
+							height: 75px
+							min-height: auto
+						+phone
+							width: 75px
+							height: 75px
+							min-height: auto
+		#navbarNav
+			justify-content: flex-end
+			padding: 28px
+			+desktop
+				background: rgba(0,0,0,0.8)
+			+tablet-lanscape
+				background: rgba(0,0,0,0.8)
+			+tablet-potiait
+				background: rgba(0,0,0,0.8)
+			+iphone
+				background: rgba(0,0,0,0.8)
+			+phone
+				background: rgba(0,0,0,0.8)
+			ul.navbar-nav
+				li.nav-item
+					margin-right: 12px
+					a.nav-link
+						padding: 10px 22px
+						font-weight: 600
+						color: #fff
+						transition: all 0.3s
+						&:hover
+							background: $cz_secondary-color
+							color: $cz_primary-color
+							transition: all 0.3s
+				&.page-nav
+					li.nav-item
+						a.nav-link
+							color: $cz_primary-color
+							+iphone
+								color: #fff
+							+phone
+								color: #fff
+	#banner
+		position: relative
+		padding-top: 100px
+		+tablet-lanscape
+			padding-top: 0
+		+tablet-potiait
+			padding-top: 0
+		+iphone
+			padding-top: 0
+		+phone
+			padding-top: 0
+		.banner-item
+			position: relative
+			width: 100%
+			background: rgba(0,0,0,0.2) url(../images/dot.png)
+			transition:  all 0.3s
+			.banner-img
+				position: relative
+				width: 100%
+				max-height: 500px
+				object-fit: cover
+				object-position: center 65%
+				transition:  all 0.3s
+				z-index: -1
+		.banner-title
+			position: absolute
+			top: 70%
+			left: 15%
+			color: #fff
+			font-size: 1.875rem
+			font-weight: 600
+			line-height: 3.6rem
+			+iphone
+				top: 52%
+				left: 10%
+			+phone
+				top: 52%
+				left: 10%
+		.carousel
+			.carousel-inner
+				position: relative
+				height: 100%
+				transition:  all 0.3s
+				.banner-img
+					width: 100%
+					max-height: 570px
+					object-fit: cover
+					object-position: center 35%
+					transition:  all 0.3s
+					+iphone
+						height: 570px
+						object-position: 90% 50%
+					+phone
+						height: 570px
+						object-position: 90% 50%
+				.carousel-caption
+					position: absolute
+					top: 50%
+					left: 10%
+					transform: translateY(-50%)
+					text-align: left
+					+desktop
+						color: #fff 
+					+tablet-lanscape
+						color: #fff 
+					+tablet-potiait
+						color: #fff 
+					+iphone
+						position: absolute
+						top: initial
+						left: 28px
+						width: 100%
+						transform: initial
+						color: #fff
+					+phone
+						position: absolute
+						top: initial
+						left: 28px
+						width: 100%
+						transform: initial
+						color: #fff
+					h1.item-title
+						margin-top: 100px
+						font-weight: 600
+						font-size: 1.875rem
+						+iphone
+							font-weight: 400
+						+phone
+							font-weight: 400
+					.item-info
+						font-size: 1rem
+					.reserve-btn
+						+block-btn(8px,20px)
+						font-weight: 600
+						margin-top: 2.5rem
+						background: $cz_secondary-color
+						+tablet-lanscape
+							margin-top: 1rem
+						+tablet-potiait
+							margin-top: 1rem
+						+iphone
+							margin-top: 2rem
+						+phone
+							margin-top: 2rem
+						
+
+	#main
+		position: relative
+		padding-top: 3rem
+		.title-box
+			+titleBox
+			+flexBox(space-between,center)
+
+	footer
+		position: relative
+		background: $cz_primary-color
+		padding: 8rem 0 6rem
+		font-size: 1rem
+		color: #fff
+		overflow: hidden
+		.toTop-Btn
+			position: absolute
+			top: 0
+			left: 0
+			font-size: 0.8rem
+			color: $cz_primary-color
+			width: 90px
+			height: 90px
+			background: url(../images/angle-up.svg) no-repeat #fff
+			background-size: 45px 45px
+			background-position: center 14px 
+			transition: all 0.3s
+			&:hover
+				background: url(../images/angle-up.svg) no-repeat $cz_secondary-color
+				background-size: 45px 45px
+				background-position: center 14px 
+				color: $cz_primary-color
+				transition: all 0.3s
+			span
+				position: absolute
+				left: 50%
+				bottom: 20px
+				transform: translateX(-50%)
+				display: inline-block
+		.left
+			+tablet-lanscape
+				order: 2
+			+tablet-potiait
+				order: 2
+			+iphone
+				order: 2
+			+phone
+				order: 2
+			ul.info
+				margin: 0
+				padding: 0
+				+tablet-lanscape
+					margin-left: 44px
+				+tablet-potiait
+					margin-left: 44px
+				+iphone
+					margin-left: 44px
+				+phone
+					margin-left: 44px
+				li
+					margin-bottom: 18px
+					+tablet-lanscape
+						margin-bottom: 10px
+					+tablet-potiait
+						margin-bottom: 10px
+					+iphone
+						margin-bottom: 10px
+					+phone
+						margin-bottom: 10px
+					a
+						color: #fff
+		.right
+			position: relative
+			text-align: right
+			+tablet-lanscape
+				order: 1
+				margin-bottom: 6.8rem
+			+tablet-potiait
+				order: 1
+				margin-bottom: 6.8rem
+			+iphone
+				order: 1
+				margin-bottom: 6.8rem
+			+phone
+				order: 1
+				margin-bottom: 6.8rem
+			.footer-logo
+				display: inline-block
+				width: 243px
+				height: 80px
+				margin-bottom: 74px
+				margin-right: 10px
+				+tablet-lanscape
+					margin-bottom: 40px
+				+tablet-potiait
+					margin-bottom: 40px
+				+iphone
+					margin-bottom: 40px
+				+phone
+					margin-bottom: 40px
+				img
+					width: 100%	
+			ul.links	
+				margin: 0
+				padding: 0
+				text-align: right
+				li
+					display: inline-block
+					margin: 8px
+					+tablet-lanscape
+						margin: 0
+					+tablet-potiait
+						margin: 0
+					+iphone
+						margin: 0
+					+phone
+						margin: 0
+					a
+						color: #fff
+						display: block
+						padding: 8px 16px
+						transition: all 0.3s
+						+tablet-lanscape
+							padding: 8px
+						+tablet-potiait
+							padding: 8px
+						+iphone
+							padding: 8px
+						+phone
+							padding: 8px
+						&:hover
+							color: $cz_secondary-color
+							transition: all 0.3s
+
+		.copyright
+			display: inline-block
+			position: absolute
+			margin: 0
+			top: 256px
+			left: -125px
+			transform: rotate(90deg)
+			font-size: 0.8rem
+			color: rgba(#fff,50%)
+			+wide-1366
+				top: 250px
+			+tablet-lanscape
+				transform: rotate(90deg)
+				position: absolute
+				top: initial
+				bottom: 172px
+				left: -148px
+			+tablet-potiait
+				transform: rotate(90deg)
+				position: absolute
+				top: initial
+				bottom: 172px
+				left: -148px
+			+iphone
+				transform: rotate(90deg)
+				position: absolute
+				top: initial
+				bottom: 172px
+				left: -148px
+			+phone
+				transform: rotate(90deg)
+				top: initial
+				position: absolute
+				bottom: 172px
+				left: -148px

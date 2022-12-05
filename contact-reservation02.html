@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="ch">
+
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		CW-space共享辦公空間
+	</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+	<link href="Content/main.css" rel="stylesheet" type="text/css" />
+	
+</head>
+
+<body>
+	<form runat="server">
+		<header id="header"></header>
+		<section id="banner" class="pt-0"></section>
+		<main>
+			<section id="banner">
+				<div class="banner-item">
+					<img src="../images/contact-banner.jpg" class="banner-img" alt="聯絡我們主視覺" />
+				</div>
+				<div class="banner-title">
+					<div>聯絡我們-預約空間</div>
+				</div>
+			</section>
+			<section id="page-main" class="contact-box">
+				<div class="container">
+					<div class="contact-tab tab">
+						<ul>
+							<li><a href="contact-visit.html" class="tab-item" title="預約參觀">預約參觀</a></li>
+							<li><a href="#!" class="tab-item active" title="預約空間">預約空間</a></li>
+							<li><a href="contact.html" class="tab-item" title="線上留言">線上留言</a></li>
+							<li><a href="contact-access.html" class="tab-item" title="地理位置">地理位置</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div id="reserve-step">
+							<ul class="step-bar">
+								<li class="step-item">
+									<div class="setp-num">1</div>
+									<div class="step-text">選擇空間</div>
+								</li>
+								<li class="step-item active">
+									<div class="setp-num">2</div>
+									<div class="step-text">選擇日期/細節</div>
+								</li>
+								<li class="step-item">
+									<div class="setp-num">3</div>
+									<div class="step-text">填寫預約資料</div>
+								</li>
+								<li class="step-item">
+									<div class="setp-num">4</div>
+									<div class="step-text">預約成功</div>
+								</li>
+							</ul>
+						</div>
+						<div id="reserve-form">
+							<span class="mb-2 d-block"></span>
+							<dl class="form-list">
+								<dt class="form-title">
+									目前選擇
+								</dt>
+								<dd class="form-info">
+									共享辦公空間
+								</dd>
+							</dl>
+							<dl class="form-list">
+								<dt class="form-title">
+									預約日期*
+								</dt>
+								<dd class="form-info">
+									<input type="text" id="date-input" class="form-select w-100" placeholder="請選擇預約日期">
+								</dd>
+							</dl>
+							<dl class="form-list">
+								<dt class="form-title">
+									座位選擇*
+								</dt>
+								<dd class="form-info">
+									<select type="text" class="form-select w-100" >
+										<option value="1">1號座位</option>
+										<option value="2">2號座位</option>
+										<option value="3">3號座位</option>
+										<option value="4">4號座位</option>
+										<option value="5">5號座位</option>
+										<option value="6">6號座位</option>
+										<option value="7">7號座位</option>
+										<option value="8">8號座位</option>
+										<option value="9">9號座位</option>
+										<option value="10">10號座位</option>
+										<option value="11">11號座位</option>
+										<option value="12">12號座位</option>
+									</select>
+								</dd>
+							</dl>
+							<div class="btn-block">
+								<a href="contact-reservation.html" class="back-btn" title="回上頁">回上頁</a>
+								<a href="contact-reservation03.html" class="next-btn" title="下一步">下一步</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer id="footer"></footer>
+
+	</form>
+	<script src="Scripts/jquery-3.6.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
+	<script>
+	//預約日曆套件
+	$(function () {
+		$("#date-input").datepicker({ dateFormat: 'yy-mm-dd' });
+	});
+	</script>
+	<script src="Scripts/template.js"></script>
+	<script src="Scripts/main.js"></script>
+</body>
+
+</html>

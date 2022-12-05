@@ -1,0 +1,128 @@
+//首頁區塊上下內距
+@mixin blockPadding($paddingTop,$paddingRight,$paddingBottom,$paddingLeft)
+	padding-top: $paddingTop
+	padding-right: $paddingRight
+	padding-bottom: $paddingBottom
+	padding-left: $paddingLeft
+
+
+//功能選單子層箭頭
+@mixin liArrow($borderColor)
+	content: ''
+	display: inline-block
+	position: absolute
+	top: 24px
+	right: 40px
+	border: solid $borderColor
+	border-width: 0px 2px 2px 0
+	padding: 3px
+	transform: rotate(-45deg)
+	pointer-events: none
+
+//首頁區塊標題
+@mixin titleBox
+	position: relative
+	font-weight: 600
+	min-height: 54px
+	z-index: 1
+	&::before // more圓點樣式
+		content: ''
+		display: block
+		border-radius: 50%
+		background: $cz_gray04
+		position: absolute
+		top: 50%
+		left: 65%
+		transform: translateY(-50%)
+		transition: all 0.5s
+		z-index: -1
+	&.title-sm // 首頁-about-title
+		&::before // 圓點樣式
+			left: 65%
+		.title
+			&::before //線樣式
+				width: 29%
+	.title //文字標題
+		position: relative
+		width: calc(100% - 50px)
+		font-size: 1.5rem
+		color: #232323
+		overflow: hidden
+		transition: all 0.3s
+		&::before // 線樣式
+			content: ''
+			display: block
+			width: 29%
+			height: 1px
+			background: $cz_gray03
+			position: absolute
+			top: 50%
+			left: 140px
+			transform: translateY(-50%)
+			transition: all 0.5s
+			z-index: -1
+		&::after //小黑原點
+			content: ""
+			display: block
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			background: $cz_gray03
+			position: absolute
+			top: 50%
+			left: 140px
+			transform: translateY(-50%)
+			transition: all 0.4s
+	&:hover 
+		& .title
+			&::before // 線樣式
+				width: 93%
+				background: $cz_secondary-color
+				transition: all 0.6s	
+			&::after //小黑圓點
+				left: 100%
+				background: transparent
+				transition: all 0.4s
+		&::before // 綠色圓點
+			width: 56px
+			height: 56px
+			background: $cz_secondary-color
+			left: calc(100% - 52px)
+			transition: all 0.4s
+	.title-btn
+		position: relative
+	
+//彈性盒子
+@mixin flexBox ($justify,$align)
+	display: flex
+	justify-content: $justify
+	align-items: $align
+
+//按鈕樣式
+@mixin block-btn($paddingX,$paddingY)
+	position: relative
+	display: inline-block
+	padding: $paddingX $paddingY
+	text-align: center
+	font-size: 1rem
+	transition: all 0.3s
+	z-index: 1
+	&:hover
+		background: $cz_primary-color
+		color: #fff
+		transition: 0.3s
+		
+@mixin block-outline-btn($outlineColor)
+	display: inline-block
+	padding: 5px 10px
+	border-radius: 20px
+	text-align: center
+	color: $outlineColor !important
+	border: solid 1px $outlineColor
+	background: #fff
+	transition: 0.3s
+	z-index: 1
+	&:hover
+		background: darken($outlineColor,5% )
+		color: #fff !important
+		transition: 0.3s

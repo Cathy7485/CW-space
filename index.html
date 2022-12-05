@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="ch">
+
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		CW-space共享辦公空間
+	</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link href="Content/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<form runat="server">
+		<header id="header">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container-fluid inner">
+					<h1 class="navbar-brand logo m-0 p-0">
+						<a class="logo-link" href="index.html" title="CW space 共享辦公空間">CW space 共享辦公空間</a>
+					</h1>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="about.html" title="關於我們">關於我們</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="shared-space.html" title="環境空間">環境空間</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#!" title="方案介紹">方案介紹</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contact-visit.html" title="聯絡我們">聯絡我們</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section id="banner" class="pt-0">
+			<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="10000">
+						<img src="images/m-banner.png" class="d-block w-100 banner-img" alt="主視覺">
+						<div class="carousel-caption ">
+							<h1 class="item-title">提供您最舒適的辦公環境</h1>
+							<p class="item-info">辦公只需要帶一台筆電，其他的我們準備</p>
+							<div><a href="contact-visit.html" class="reserve-btn" title="立即預約">立即預約</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<main id="main">
+			<!-- 關於我們 -->
+			<div id="about" class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="inner">
+							<a href="about.html" class="title-box title-sm" title="關於我們">
+								<div class="title">
+									<span>關於我們
+									</span>
+								</div>
+								<span class="title-btn">MORE</span>
+							</a>
+							<div class="info">
+								<p>我們位於交通發達市中心區域性的商業區，提供給您最便利的辦公位置。</p>
+								<p>您不需要額外再支出龐大的設備採買費用，只需要帶上您的筆電，即刻便可以開始工作！</p>
+								<br>
+								<p>最適合新創企業、SOHO族、斜槓專家</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-img">
+							<figure>
+								<img src="images/about.jpg" alt="關於我們圖片">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 環境空間 -->
+			<div id="space">
+				<div class="container">
+					<a href="shared-space.html" class="title-box" title="環境空間">
+						<div class="title">
+							<span>環境空間</span>
+						</div>
+						<span class="title-btn">MORE</span>
+					</a>
+					<div class="swiper spaceSwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide space-item ">
+								<a href="#!">
+									<img src="../images/space01.jpg" alt="共享辦公空間">
+								</a>
+							</div>
+							<div class="swiper-slide space-item ">
+								<a href="#!">
+									<img src="../images/space02.jpg" alt="獨立辦公空間">
+								</a>
+							</div>
+							<div class="swiper-slide space-item ">
+								<a href="#!">
+									<img src="../images/space03.jpg" alt="會議室空間">
+								</a>
+							</div>
+						</div>
+						<div class="swiper-btn">
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 方案介紹 -->
+			<div id="pricing-plan">
+				<div class="container position-relative">
+					<a href="#!" class="title-box" title="方案介紹">
+						<div class="title">
+							<span>方案介紹</span>
+						</div>
+						<span class="title-btn">MORE</span>
+					</a>
+					<div class="swiper planSwiper">
+						<div class="swiper-wrapper">
+							<!-- <div class="swiper-slide">
+								<div class="plan-item">
+									<div class="img-box">
+										<img src="../images/plan01.jpg" alt="共享辦公空間">
+									</div>
+									<div class="bottom">
+										<div class="left-info">
+											<div class="title">共享辦公空間</div>
+											<ul class="price">
+												<li>單日體驗 NT 300 / 天</li>
+												<li>單月方案 NT3,500 / 月</li>
+											</ul>
+										</div>
+										<div class="info-text">
+											<p class="open">開放時間：平日 週一至週五 8:00-18:00（不含例假日）</p>
+											<p class="info">獨立寬敞座位，穩定高速wifi、獨立插座，適合SOHO族、一人公司者，公共空間設備皆可自由使用</p>
+										</div>
+										<a href="#!" class="more-btn">更多資訊</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="plan-item">
+									<div class="img-box">
+										<img src="../images/plan02.jpg" alt="獨立辦公空間">
+									</div>
+									<div class="bottom">
+										<div class="left-info">
+											<div class="title">獨立辦公空間</div>
+											<ul class="price">
+												<li>NT 6,000/月</li>
+											</ul>
+										</div>
+										<div class="info-text">
+											<p class="open">開放時間：平日 週一至週五 8:00~21:00（不含例假日）</p>
+											<p class="info">寬敞座位，每個座位皆享有大桌面、可上鎖辦公抽屜，人體工學減壓電腦椅，讓您舒服久坐辦公，專屬獨立隔音空間，讓您專注辦公不被打擾，公共空間設備皆可自由使用</p>
+										</div>
+										<div class="text-end">
+											<a href="#!" class="more-btn">更多資訊</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="plan-item">
+									<div class="img-box">
+										<img src="../images/plan03.jpg" alt="會議室空間">
+									</div>
+									<div class="bottom">
+										<div class="left-info">
+											<div class="title">會議室空間</div>
+											<ul class="price">
+												<li>單日使用 NT 500/小時 (每次 2小時起租)</li>
+											</ul>
+										</div>
+										<div class="info-text">
+											<p class="open">開放時間：週一至週五 8:00~21:00（不含例假日）</p>
+											<p class="info">
+												專屬獨立隔音空間，讓您專注開會工作不被打擾，穩定高速wifi，完善投影設備。
+											</p>
+										</div>
+										<div class="text-end">
+											<a href="#!" class="more-btn">更多資訊</a>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<div class="swiper-btn">
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 最新公告 -->
+			<div id="news">
+				<div class="container">
+					<a href="news.html" class="title-box" title="最新公告">
+						<div class="title">
+							<span>最新公告</span>
+						</div>
+						<span class="title-btn">MORE</span>
+					</a>
+					<ul class="news-list">
+						<!-- <li class="news-item">
+							<a href="#!" class="item" title="周年慶優惠大放送，各項目租金下殺9折，立即手刀預約！一年一次錯過可惜！">
+								<div class="title">周年慶優惠大放送，各項目租金下殺9折，立即手刀預約！一年一次錯過可惜！</div>
+								<div class="item-block">
+									<div class="date">2022/09/20</div>
+									<div class="tag">置頂</div>
+								</div>
+							</a>
+						</li>
+						<li class="news-item">
+							<a href="#!" class="item" title="預計9/28(三)上午10:30~11:00 清洗冷氣濾網，造成不便敬請見諒！">
+								<div class="title">預計9/28(三)上午10:30~11:00 清洗冷氣濾網，造成不便敬請見諒！</div>
+								<div class="item-block">
+									<div class="date">2022/09/20</div>
+									<div class="tag">置頂</div>
+								</div>
+							</a>
+						</li>
+						<li class="news-item">
+							<a href="#!" class="item" title="9/15(四)櫃台務業櫃台整修，郵件系統13:00~15:30 系統更新，收發郵件包裹預計16:00恢復，造成不便敬請見諒！">
+								<div class="title">9/15(四)櫃台務業櫃台整修，郵件系統13:00~15:30 系統更新，收發郵件包裹預計16:00恢復，造成不便敬請見諒！</div>
+								<div class="item-block">
+									<div class="date">2022/09/20</div>
+									<div class="tag">置頂</div>
+								</div>
+							</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<!-- 常見問題 -->
+			<div id="fqa">
+				<div class="container">
+					<a href="faq.html" class="title-box" title="常見問題">
+						<div class="title">
+							<span>常見問題</span>
+						</div>
+						<span class="title-btn">MORE</span>
+					</a>
+					<div class="fqu-list accordion accordion-flush" id="accordionFlushExample">
+						<!-- <div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Q.
+									辦公空間可以飲食嗎?
+								</a>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									A. 辦公空間可以飲食，但不接受開設派對或慶祝活動
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Q.
+									可以接受當天預約參觀嗎?
+								</a>
+							</h2>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									A. 若要預覽參觀空間，請前一天先來電預約，恕不接受當天預約
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Q.
+									若是清晨或半夜要加班，空間有開放嗎?
+								</a>
+							</h2>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									A. 開放時間每日6:00-24:00，其餘時間因安全考量恕不開放。
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFour">
+								<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Q.
+									辦公空間可以開火嗎?
+								</a>
+							</h2>
+							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									A. 因安全考量不開放開火，若要加熱食品，茶水間提供微波爐可以使用。
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFive">
+								<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">Q.
+									可以接收快遞或包裹嗎?
+								</a>
+							</h2>
+							<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFire"
+								data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									A. 可以，一樓大廳有接待櫃檯，可以供各公司收發郵件或包裹
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- 預約參觀 -->
+			<div id="visit">
+				<div class="container">
+					<div class="title">我們體驗過都覺得棒</div>
+					<a href="contact-visit.html" class="visit-btn" title="預約參觀">預約參觀</a>
+				</div>
+			</div>
+		</main>
+		<footer id="footer">
+			<a href="#!" class="toTop-Btn" title="回頂端">
+				<span>回頂端</span>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 left">
+						<ul class="info">
+							<li>信箱：<a href="mailto:CWspace@gmail.com">CWspace@gmail.com</a></li>
+							<li>電話：<a href="tel:+886-6-666-666">06-666-6666</a></li>
+							<li>傳真：06-666-6767</li>
+							<li>地址：<a href="#!" target="_blank" rel="noopener noreferrer">臺南市安平區永華路二段777號</a></li>
+							<li>服務時間：周一至周五 08:30~17:30</li>
+						</ul>
+					</div>
+					<div class="col-xl-6 right">
+						<div class="footer-logo">
+							<img src="../images/footer-logo.jpg" alt="logo">
+						</div>
+						<ul class="links">
+							<li><a href="About.html" title="關於我們">關於我們</a></li>
+							<li><a href="office-space.html" title="環境空間">環境空間</a></li>
+							<li><a href="#!" title="方案介紹">方案介紹</a></li>
+							<li><a href="contact-visit.html" title="聯絡我們">聯絡我們</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="copyright">Copyright 2022 - CW-space 共享辦公空間 版權所有</p>
+		</footer>
+	</form>
+	<script src="Scripts/jquery-3.6.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script src="Scripts/data.js"></script>
+	<script src="Scripts/main.js"></script>
+</body>
+
+</html>
