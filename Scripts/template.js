@@ -67,7 +67,7 @@ var init = function init(){
 				</div>
 				<div class="col-xl-6 right">
 					<div class="footer-logo">
-						<img src="../images/footer-logo.jpg" alt="logo">
+						<img src="images/footer-logo.jpg" alt="logo">
 					</div>
 					<ul class="links">
 						<li><a href="About.html" title="關於我們">關於我們</a></li>
