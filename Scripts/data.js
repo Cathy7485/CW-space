@@ -18,7 +18,7 @@ function getPlanData(){
 		str+= `<div class="swiper-slide">
 					<div class="plan-item">
 						<div class="img-box">
-							<img src="${i.ingUrl}" alt="共享辦公空間">
+							<img src="${i.imgUrl}" alt="共享辦公空間">
 						</div>
 						<div class="bottom">
 							<div class="left-info">
