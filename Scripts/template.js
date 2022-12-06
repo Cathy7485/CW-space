@@ -20,7 +20,7 @@ var init = function init(){
 							<a class="nav-link" href="shared-space.html" title="環境空間">環境空間</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#!" title="方案介紹">方案介紹</a>
+							<a class="nav-link" href="javascript:void(0)" title="方案介紹">方案介紹</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="contact-visit.html" title="聯絡我們">聯絡我們</a>
@@ -61,7 +61,7 @@ var init = function init(){
 						<li>信箱：<a href="mailto:CWspace@gmail.com">CWspace@gmail.com</a></li>
 						<li>電話：<a href="tel:+886-6-666-666">06-666-6666</a></li>
 						<li>傳真：06-666-6767</li>
-						<li>地址：<a href="#!" target="_blank" rel="noopener noreferrer">臺南市安平區永華路二段777號</a></li>
+						<li>地址：<a href="https://goo.gl/maps/uxbdai13FQP3nZJo8" target="_blank" title="臺南市安平區永華路二段777號">臺南市安平區永華路二段777號</a></li>
 						<li>服務時間：周一至周五 08:30~17:30</li>
 					</ul>
 				</div>
@@ -69,12 +69,6 @@ var init = function init(){
 					<div class="footer-logo">
 						<img src="images/footer-logo.jpg" alt="logo">
 					</div>
-					<ul class="links">
-						<li><a href="About.html" title="關於我們">關於我們</a></li>
-						<li><a href="office-space.html" title="環境空間">環境空間</a></li>
-						<li><a href="#!" title="方案介紹">方案介紹</a></li>
-						<li><a href="contact-visit.html" title="聯絡我們">聯絡我們</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>
