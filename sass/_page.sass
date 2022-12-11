@@ -353,6 +353,12 @@
 				left: 50%
 				transform: translateX(-50%)
 				z-index: -1
+				+desktop
+					width: calc(100% - 140px)
+				+tablet-potiait
+					width: calc(100% - 120px)
+				+iphone
+					width: calc(100% - 100px)
 			li.step-item
 				display: block
 				margin: 0 auto
@@ -377,7 +383,6 @@
 	//預約表單
 	#reserve-form
 		font-size: 1.125rem
-
 		dl.form-list
 			display: flex
 			justify-content: space-between

@@ -2011,6 +2011,21 @@ body footer .copyright {
   transform: translateX(-50%);
   z-index: -1;
 }
+@media (max-width: 992px) {
+  #page-main #reserve-step ul.step-bar::after {
+    width: calc(100% - 140px);
+  }
+}
+@media (max-width: 576px) {
+  #page-main #reserve-step ul.step-bar::after {
+    width: calc(100% - 120px);
+  }
+}
+@media (max-width: 415px) {
+  #page-main #reserve-step ul.step-bar::after {
+    width: calc(100% - 100px);
+  }
+}
 #page-main #reserve-step ul.step-bar li.step-item {
   display: block;
   margin: 0 auto;
