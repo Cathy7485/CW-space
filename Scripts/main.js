@@ -136,3 +136,60 @@ $(".toTop-Btn").click(function (e) {
 });
 
 
+
+//預約參觀
+//送出按鍵監聽
+const submitBtn = document.querySelector("#visit-reservation .submit-btn");
+submitBtn.addEventListener("click",addVisitOrder);
+function addVisitOrder(){
+  const visitName = document.querySelector("#visit-reservation .name");
+  const companyName = document.querySelector("#visit-reservation .company-name");
+  const visitPhone = document.querySelector("#visit-reservation .contact-phone");
+  const email = document.querySelector("#visit-reservation .email");
+  const spaceType = document.querySelector("#visit-reservation .space-type");
+  const visitDate = document.querySelector("#visit-reservation .visit-date");
+  const visitTime = document.querySelector("#visit-reservation .visit-time");
+
+  if (
+    visitName.value == "" ||
+    companyName.value == "" ||
+    visitPhone.value == "" ||
+    email.value == "" ||
+    spaceType.value == "" ||
+    visitDate.value == "" ||
+    visitTime.value == ""
+  ) {
+    alert("請填寫表單完整！");
+    return;
+  }
+  
+
+  let order = {
+    name: visitName.value,
+    company: companyName.value,
+    phone: visitPhone.value,
+    email: email.value,
+    space: spaceType.value,
+    appointment: visitDate.value,
+    time: visitTime.value
+  }
+
+  const URL = "https://json-server-vercel-cw-space.vercel.app/reserves";
+  let orderData = [];
+  axios.post(URL,order)
+    .then(function (response) {
+      orderData = response.data;
+      alert("預約成功！");
+      visitName.value = "" ;
+      companyName.value = "" ;
+      visitPhone.value = "" ;
+      email.value = "" ;
+      spaceType.value = "想要參觀哪個空間" ;
+      visitDate.value = "" ;
+      visitTime.value = "" ;
+
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}

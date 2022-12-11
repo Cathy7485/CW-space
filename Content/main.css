@@ -1933,7 +1933,7 @@ body footer .copyright {
   border-top: solid 1px #E7E7E7;
   margin-bottom: 0;
 }
-#page-main .reserve-list .form-list:nth-child(6) {
+#page-main .reserve-list .form-list:last-of-type {
   border-bottom: solid 1px #E7E7E7;
 }
 #page-main .reserve-list .form-list:nth-child(odd) {
@@ -1950,6 +1950,7 @@ body footer .copyright {
   padding: 11px 16px;
   border: solid 1px #E7E7E7;
   margin-bottom: 0;
+  border-radius: 0;
 }
 #page-main .reserve-list .btn-block {
   margin-top: 64px;
@@ -2086,6 +2087,12 @@ body footer .copyright {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: right;
+}
+#page-main #reserve-form dl.form-list .form-info .form-input {
+  padding: 11px 16px;
+  border: solid 1px #E7E7E7;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 #page-main #reserve-form dl.form-list .bg-text {
   position: absolute;

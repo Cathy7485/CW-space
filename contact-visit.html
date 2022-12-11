@@ -12,6 +12,7 @@
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 	<link href="Content/main.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -41,14 +42,14 @@
 				</div>
 				<div class="container">
 					<div class="row">
-						<div class="reserve-list">
+						<div id="visit-reservation" class="reserve-list">
 							<span class="mb-2 d-block">請填寫表單，將會有專人聯繫您</span>
 							<dl class="form-list">
 								<dt class="form-title">
 									姓名*
 								</dt>
 								<dd class="form-info">
-									<input type="text" class="form-input w-100" placeholder="請輸入姓名">
+									<input type="text" class="name form-input w-100" placeholder="請輸入姓名">
 								</dd>
 							</dl>
 							<dl class="form-list">
@@ -56,7 +57,7 @@
 									公司名稱*
 								</dt>
 								<dd class="form-info">
-									<input type="text" class="form-input w-100" placeholder="請輸入公司名稱">
+									<input type="text" class="company-name form-input w-100" placeholder="請輸入公司名稱">
 								</dd>
 							</dl>
 							<dl class="form-list">
@@ -64,7 +65,7 @@
 									聯絡電話*
 								</dt>
 								<dd class="form-info">
-									<input type="text" class="form-input w-100" placeholder="請輸入聯絡電話">
+									<input type="text" class="contact-phone form-input w-100" placeholder="請輸入聯絡電話">
 								</dd>
 							</dl>
 							<dl class="form-list">
@@ -72,7 +73,7 @@
 									電子信箱*
 								</dt>
 								<dd class="form-info">
-									<input type="text" class="form-input w-100" placeholder="請輸入電子信箱*">
+									<input type="text" class="email form-input w-100" placeholder="請輸入電子信箱">
 								</dd>
 							</dl>
 							<dl class="form-list">
@@ -80,12 +81,34 @@
 									想要參觀哪個空間*
 								</dt>
 								<dd class="form-info">
-									<select class="form-input w-100">
+									<select class="space-type form-select form-input w-100">
 										<option value="none" selected disabled hidden>請選擇您要參觀的空間</option>
 										<option>共享辦公空間</option>
 										<option>獨立辦公空間</option>
 										<option>會議室空間</option>
 									</select>
+								</dd>
+							</dl>
+							<dl class="form-list">
+								<dt class="form-title">
+									參觀日期*
+								</dt>
+								<dd class="form-info">
+									<div class="container-fulid"><div class="row">
+										<div class="col-lg-6">
+											<input type="text" id="date-input" class="visit-date form-select form-input w-100" placeholder="請選擇日期">
+										</div>
+										<div class="col-lg-6">
+											<select type="text" class="visit-time form-input form-select w-100">
+												<option value="9:00">9:00</option>
+												<option value="10:00">10:00</option>
+												<option value="11:00">11:00</option>
+												<option value="12:00">12:00</option>
+												<option value="13:00">13:00</option>
+												<option value="14:00">14:00</option>
+												<option value="15:00">15:00</option>
+											</select>
+										</div>
 								</dd>
 							</dl>
 							<div class="btn-block">
@@ -103,9 +126,17 @@
 
 	</form>
 	<script src="Scripts/jquery-3.6.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script>
+		//預約日曆套件
+		$(function () {
+			$("#date-input").datepicker({ dateFormat: 'yy-mm-dd' });
+		});
+	</script>
 	<script src="Scripts/template.js"></script>
 	<script src="Scripts/main.js"></script>
 </body>

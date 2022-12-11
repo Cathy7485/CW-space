@@ -57,7 +57,6 @@ function getNews(){
 	newsData.forEach(i=>{
 		let newData = new Date(i.date * 1000);
 		dataValues = `${newData.getFullYear()+ '-' }${newData.getMonth() + 1 + '-'}${newData.getDate()}`;
-		console.log(dataValues);
 		str+=`<li class="news-item">
 			<a href="#!" class="item" title="${i.title}">
 				<div class="title">${i.title}</div>
@@ -105,6 +104,7 @@ function fqa(){
 	})
 	accordionItem.innerHTML = str;
 }
+
 
 
 //初始化資料
