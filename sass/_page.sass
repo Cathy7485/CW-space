@@ -294,7 +294,7 @@
 				font-size: 1.125rem
 				border-bottom: solid 1px $cz_primary-color
 
-	//聯絡我們-預約參觀
+	//聯絡我們-預約_參觀
 	.reserve-list
 		margin-top: 4rem
 		font-size: 1.125rem
@@ -333,7 +333,7 @@
 				background: $cz_gray02
 				font-weight: 600
 				font-size: 1.125rem
-	//聯絡我們-預約空間
+	//聯絡我們-預約_空間
 	#reserve-step		
 		ul.step-bar
 			display: flex
@@ -374,9 +374,10 @@
 				.step-text
 					display: block
 					margin-top: 32px
-	//預約step01
+	//預約表單
 	#reserve-form
 		font-size: 1.125rem
+
 		dl.form-list
 			display: flex
 			justify-content: space-between
@@ -394,26 +395,10 @@
 			.form-title
 				min-width: 120px
 				width: 20%
-				.space-img	
-					width: 100%
-					max-height: 250px
-					overflow: hidden
-					img
-						width: 100%	
-						object-fit: contain
-						object-position: center bottom
 			.form-info
 				margin-bottom: 0
 				width: 100%
 				margin-left: 8px
-				.choice-space
-					color: $cz_gray04
-					font-size: 1rem
-				.space-name
-					margin-top: 32px
-					font-size: 1.5rem
-					font-weight: 600
-					text-align: right
 				.form-input
 					padding: 11px 16px	
 					border: solid 1px $cz_gray02
@@ -429,6 +414,27 @@
 				color: $cz_gray01
 				white-space: nowrap
 				z-index: -1
+		&.step-one
+			dl.form-list
+				&.choice-space
+					color: $cz_gray04
+					border: solid 2px $cz_secondary-color
+					font-size: 1rem
+				.left
+					.space-img
+						width: 367px
+						height: 180px
+						overflow: hidden
+						img
+							width: 100%
+							object-fit: contain
+							object-position: center bottom
+				.right
+					.space-name
+						margin-top: 32px
+						font-size: 1.5rem
+						font-weight: 600
+						text-align: right
 		// step 04
 		.success-message
 			background: $cz_gray01
