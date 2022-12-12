@@ -135,4 +135,13 @@ $(".toTop-Btn").click(function (e) {
   );
 });
 
+//預約空間 選擇空間監聽
+const spaceList = document.querySelector("#reserve-form fieldset");
+const selectSpace = document.querySelectorAll("#reserve-form .option");
+
+spaceList.addEventListener("click",e=>{
+  const target = e.target;
+  // console.log(target.classList)
+  // if(target.classList == "")
+})
 
