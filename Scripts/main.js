@@ -135,42 +135,10 @@ $(".toTop-Btn").click(function (e) {
   );
 });
 
-//預約空間 step1
-//選擇空間監聽
-const spaceList = document.querySelector("#reserve-form fieldset");
-const selectSpace = document.querySelectorAll("#reserve-form .option");
-
-spaceList.addEventListener("click",e=>{
-  //如果點擊對象沒有.option就中斷程式
-  const classAry = Array.from(e.target.offsetParent.classList);
-  if (!classAry.includes("option")){
-    return; 
-  }
-
-  const target = e.target;
-  const option = target.offsetParent;//抓取父層
-	const spaceTag = option.querySelector(".space-name");
-  const spaceName = spaceTag.textContent;//抓取點擊的空間名稱
-	localStorage.setItem('choiceSpace', spaceName); //將選擇的空間名稱存入localStorage
-
-  //及時渲染選擇的空間名稱
-  const choiceSpace = document.querySelector(".choice-space");
-  const render = localStorage.getItem('choiceSpace');
-  choiceSpace.textContent = `您目前選擇的是：${render}`;
-
-	//判斷兄弟節點有沒有select，有的話要拿掉
-	const outerSubs = document.querySelector("fieldset").children;
-	const ary = Array.from(outerSubs);
-	ary.forEach(i=>{
-		// console.log()
-		if(i.getAttribute("class").includes("select")){
-			i.classList.remove("select");
-		}
-	})
-
-	// //沒有select就加上去，有就拿掉
-	option.classList.add("select");
-	
-})
 
 //預約空間 step2
+function stepTwo() {
+  const spaceName = document.querySelector('#reserve-form .choice-space');
+  spaceName.textContent = localStorage.getItem('choiceSpace');
+}
+stepTwo();
