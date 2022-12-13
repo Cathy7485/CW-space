@@ -61,7 +61,7 @@
 								</li>
 							</ul>
 						</div>
-						<div id="reserve-form">
+						<div id="reserve-form" class="step-three">
 							<span class="mb-2 d-block">請填寫預約資料</span>
 							<dl class="form-list">
 								<dt class="form-title">姓名*
@@ -111,6 +111,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script src="Scripts/template.js"></script>
+	<script>
+		//預約空間 step3
+		function stepThree() {
+			const stepThree = document.querySelector("#reserve-form .step-three");
+			console.log(stepThree)
+		}
+		stepThree();
+	</script>
 	<script src="Scripts/main.js"></script>
 </body>
 

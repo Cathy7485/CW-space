@@ -135,10 +135,3 @@ $(".toTop-Btn").click(function (e) {
   );
 });
 
-
-//預約空間 step2
-function stepTwo() {
-  const spaceName = document.querySelector('#reserve-form .choice-space');
-  spaceName.textContent = localStorage.getItem('choiceSpace');
-}
-stepTwo();

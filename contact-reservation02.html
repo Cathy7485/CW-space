@@ -84,7 +84,7 @@
 									座位選擇*
 								</dt>
 								<dd class="form-info">
-									<select type="text" class="form-input form-select w-100" >
+									<select type="text" class="form-input form-select seat-num w-100" >
 										<option value="1">1號座位</option>
 										<option value="2">2號座位</option>
 										<option value="3">3號座位</option>
@@ -124,7 +124,21 @@
 	$(function () {
 		$("#date-input").datepicker({ dateFormat: 'yy-mm-dd' });
 	});
+	//預約空間 step2
+		function stepTwo() {
+			const spaceName = document.querySelector('#reserve-form .choice-space');
+			spaceName.textContent = localStorage.getItem('choiceSpace');
 
+			const data = document.querySelector("#date-input").value;
+			const seatNum = document.querySelector(".seat-num").value;
+
+			let obj = {
+				space: spaceName.textContent,
+				appointment: data,
+				seatNum: seatNum
+			}
+		}
+		stepTwo();
 	</script>
 	<script src="Scripts/template.js"></script>
 	<script src="Scripts/main.js"></script>
