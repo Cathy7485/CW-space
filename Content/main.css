@@ -2054,6 +2054,10 @@ body footer .copyright {
 #page-main #reserve-form {
   font-size: 1.125rem;
 }
+#page-main #reserve-form .choice-space {
+  color: #848484;
+  font-size: 1rem;
+}
 #page-main #reserve-form dl.form-list {
   display: flex;
   justify-content: space-between;
@@ -2074,6 +2078,7 @@ body footer .copyright {
 }
 #page-main #reserve-form dl.form-list.select {
   border: solid 3px #D0FB55;
+  transition: all 0.3s;
 }
 #page-main #reserve-form dl.form-list .form-title {
   min-width: 120px;
