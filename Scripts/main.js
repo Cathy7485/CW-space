@@ -141,7 +141,23 @@ const selectSpace = document.querySelectorAll("#reserve-form .option");
 
 spaceList.addEventListener("click",e=>{
   const target = e.target;
-  // console.log(target.classList)
-  // if(target.classList == "")
+	const option = target.offsetParent;//抓取父層
+	const spaceTag = option.querySelector(".space-name");
+	const spaceName = spaceTag.textContent;
+	localStorage.setItem('choiceSpace', spaceName); //將選擇的空間名稱存入localStorage
+
+	//判斷兄弟節點有沒有select，有的話要拿掉
+	const outerSubs = document.querySelector("fieldset").children;
+	const ary = Array.from(outerSubs);
+	ary.forEach(i=>{
+		// console.log()
+		if(i.getAttribute("class").includes("select")){
+			i.classList.remove("select");
+		}
+	})
+
+	// //沒有select就加上去，有就拿掉
+	option.classList.add("select");
+	
 })
 
