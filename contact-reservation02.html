@@ -136,7 +136,7 @@
 
 
 			nextBtn.addEventListener("click",e=>{
-				e.preventDefault();
+				e.preventDefault(); //取消滑鼠事件
 				let bookingObj = {
 					space: spaceName.textContent,
 					appointment: date,
@@ -150,11 +150,11 @@
 						bookingData = response.data;
 
 						if(date.value === ""){
-							return;
+							return; //先中斷
 							alert("請填寫完整！");
 						}
 						alert("填寫成功！");
-						date.value = "";
+						date.value = ""; //清空欄位
 						seatNum.value = "1號座位";
 
 					})

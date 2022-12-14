@@ -1539,7 +1539,7 @@ body footer .copyright {
 }
 @media (max-width: 1640px) {
   #page-main.space-box .info-box::after, #page-main.contact-box .info-box::after {
-    top: -26px;
+    top: -40px;
     height: 540px;
   }
 }
