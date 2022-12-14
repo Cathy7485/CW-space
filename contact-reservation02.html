@@ -129,14 +129,40 @@
 			const spaceName = document.querySelector('#reserve-form .choice-space');
 			spaceName.textContent = localStorage.getItem('choiceSpace');
 
-			const data = document.querySelector("#date-input").value;
-			const seatNum = document.querySelector(".seat-num").value;
+			const date = document.querySelector("#reserve-form .form-input").value;
+			const seatNum = document.querySelector("#reserve-form .seat-num").value;
 
-			let obj = {
-				space: spaceName.textContent,
-				appointment: data,
-				seatNum: seatNum
-			}
+			const nextBtn = document.querySelector("#reserve-form .next-btn");
+
+
+			nextBtn.addEventListener("click",e=>{
+				e.preventDefault();
+				let bookingObj = {
+					space: spaceName.textContent,
+					appointment: date,
+					seatNum: seatNum
+				}
+
+				const URL = "https://json-server-vercel-cw-space.vercel.app/booking";
+				let bookingData = [];
+				axios.post(URL, bookingObj)
+					.then(function (response) {
+						bookingData = response.data;
+
+						if(date.value === ""){
+							return;
+							alert("請填寫完整！");
+						}
+						alert("填寫成功！");
+						date.value = "";
+						seatNum.value = "1號座位";
+
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
+			})
+
 		}
 		stepTwo();
 	</script>
