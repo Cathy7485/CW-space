@@ -117,19 +117,19 @@
 			const stepThree = document.querySelector("#reserve-form.step-three");
 			const nextBtn = document.querySelector("#reserve-form .next-btn");
 
-			const name = document.querySelector("#reserve-form .name").value;
-			const company = document.querySelector("#reserve-form .company").value;
-			const phone = document.querySelector("#reserve-form .phone").value;
-			const email = document.querySelector("#reserve-form .email").value;
+			const name = document.querySelector("#reserve-form .name");
+			const company = document.querySelector("#reserve-form .company");
+			const phone = document.querySelector("#reserve-form .phone");
+			const email = document.querySelector("#reserve-form .email");
 
 			nextBtn.addEventListener("click", e => {
 				e.preventDefault(); //取消滑鼠事件
 				
 				let bookingObj = {
-					name: name,
-					company: company,
-					phone: phone,
-					email: email
+					name: name.value,
+					company: company.value,
+					phone: phone.value,
+					email: email.value
 				}
 
 				const URL = "https://json-server-vercel-cw-space.vercel.app/booking";
@@ -139,17 +139,17 @@
 						bookingData = response.data;
 
 
-						if (name === "") {
+						if (name.value === "" || company.value === "" || phone.value === "" || email.value === "") {
 							alert("請填寫完整！");
 							return; //先中斷
 						}
 						alert("填寫成功！");
-						//  //清空欄位
-						// name = "";
-						// company = "";
-						// phone = "";
-						// email = "";
-						// setTimeout("location.href='contact-reservation04.html'", 1); // 1秒後跳轉頁面
+						 //清空欄位
+						name.value = "";
+						company.value = "";
+						phone.value = "";
+						email.value = "";
+						setTimeout("location.href='contact-reservation04.html'", 1); // 1秒後跳轉頁面
 
 					})
 					.catch(function (error) {
