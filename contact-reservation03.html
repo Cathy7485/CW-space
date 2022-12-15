@@ -121,10 +121,12 @@
 			const company = document.querySelector("#reserve-form .company");
 			const phone = document.querySelector("#reserve-form .phone");
 			const email = document.querySelector("#reserve-form .email");
-
+			const bookingObj = JSON.parse(localStorage.getItem('bookingData')); //從localStorage取出bookingData再轉成obj
+			
 			nextBtn.addEventListener("click", e => {
 				e.preventDefault(); //取消滑鼠事件
 				
+				// console.log(JSON.parse(bookingObj))
 				let bookingObj = {
 					name: name.value,
 					company: company.value,
