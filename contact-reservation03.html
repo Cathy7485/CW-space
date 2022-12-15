@@ -138,17 +138,18 @@
 					.then(function (response) {
 						bookingData = response.data;
 
-						if (name === "" || company === "" || phone === "" || email === "") {
-							return; //先中斷
+
+						if (name === "") {
 							alert("請填寫完整！");
+							return; //先中斷
 						}
 						alert("填寫成功！");
-						 //清空欄位
-						name.value = "";
-						company.value = "";
-						phone.value = "";
-						email.value = "";
-						setTimeout("location.href='contact-reservation04.html'", 1); // 1秒後跳轉頁面
+						//  //清空欄位
+						// name = "";
+						// company = "";
+						// phone = "";
+						// email = "";
+						// setTimeout("location.href='contact-reservation04.html'", 1); // 1秒後跳轉頁面
 
 					})
 					.catch(function (error) {

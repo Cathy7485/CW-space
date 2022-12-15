@@ -76,7 +76,7 @@
 									預約日期*
 								</dt>
 								<dd class="form-info">
-									<input type="text" id="date-input" class="form-input form-select w-100" placeholder="請選擇預約日期">
+									<input type="text" id="date-input" class=" date form-input form-select w-100" placeholder="請選擇預約日期">
 								</dd>
 							</dl>
 							<dl class="form-list">
@@ -129,33 +129,34 @@
 			const spaceName = document.querySelector('#reserve-form .choice-space');
 			spaceName.textContent = localStorage.getItem('choiceSpace');
 
-			const date = document.querySelector("#reserve-form .form-input").value;
-			const seatNum = document.querySelector("#reserve-form .seat-num").value;
+			const date = document.querySelector("#reserve-form .date");
+			const seatNum = document.querySelector("#reserve-form .seat-num");
 
 			const nextBtn = document.querySelector("#reserve-form .next-btn");
-
 
 			nextBtn.addEventListener("click",e=>{
 				e.preventDefault(); //取消滑鼠事件
 				let bookingObj = {
 					space: spaceName.textContent,
-					appointment: date,
-					seatNum: seatNum
+					appointment: date.value,
+					seatNum: seatNum.value
 				}
 
 				const URL = "https://json-server-vercel-cw-space.vercel.app/booking";
 				let bookingData = [];
 				axios.post(URL, bookingObj)
 					.then(function (response) {
-						bookingData = response.data;
 
-						if(date.value === ""){
-							return; //先中斷
+						if (date.value === "") {
 							alert("請填寫完整！");
+							return; //先中斷
 						}
-						// alert("填寫成功！");
+
+						bookingData = response.data;
+						alert("填寫成功！");
 						date.value = ""; //清空欄位
 						seatNum.value = "1號座位";
+
 						setTimeout("location.href='contact-reservation03.html'", 1); // 1秒後跳轉頁面
 
 					})
