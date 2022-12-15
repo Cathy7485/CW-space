@@ -2191,6 +2191,34 @@ body footer .copyright {
   color: #fff;
   transition: 0.3s;
 }
+#page-main #access-box {
+  position: relative;
+  margin-top: 8rem;
+}
+#page-main #access-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: calc(100% - 24px);
+  height: 100%;
+  background: #232323;
+  z-index: -1;
+}
+#page-main #access-box .left-block .inner {
+  padding: 54px 42px;
+  background: #232323;
+  color: #fff;
+}
+#page-main #access-box .left-block .inner .title {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+#page-main #access-box .right-block iframe {
+  min-height: 300px;
+}
 
 #space .swiper {
   width: 100%;

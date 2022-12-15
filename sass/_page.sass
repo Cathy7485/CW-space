@@ -294,7 +294,7 @@
 				font-size: 1.125rem
 				border-bottom: solid 1px $cz_primary-color
 
-	//聯絡我們-預約_參觀
+	// 聯絡我們-預約_參觀
 	.reserve-list
 		margin-top: 4rem
 		font-size: 1.125rem
@@ -333,7 +333,7 @@
 				background: $cz_gray02
 				font-weight: 600
 				font-size: 1.125rem
-	//聯絡我們-預約_空間
+	// 聯絡我們-預約_空間
 	#reserve-step		
 		ul.step-bar
 			display: flex
@@ -380,7 +380,7 @@
 				.step-text
 					display: block
 					margin-top: 32px
-	//預約表單
+	// 聯絡我們-預約表單
 	#reserve-form
 		font-size: 1.125rem
 		.choice-space
@@ -476,4 +476,31 @@
 				font-size: 1.125rem
 				margin-right: 24px
 				background: $cz_gray02
-	
+	//聯絡我們-地理位置
+	#access-box
+		position: relative
+		margin-top: 8rem
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			display: block
+			width: calc( 100% - 24px)
+			height: 100%
+			background: $cz_primary-color
+			z-index: -1
+		.left-block
+			.inner
+				padding: 54px 42px
+				background: $cz_primary-color
+				color: #fff
+				.title	
+					font-size: 1.5rem
+					margin-bottom: 24px
+		.right-block
+			iframe
+				min-height: 300px
+		
+			
