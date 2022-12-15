@@ -142,27 +142,14 @@
 					seatNum: seatNum.value
 				}
 
-				const URL = "https://json-server-vercel-cw-space.vercel.app/booking";
-				let bookingData = [];
-				axios.post(URL, bookingObj)
-					.then(function (response) {
+				if (date.value === "") {
+					alert("請填寫完整！");
+					return; //先中斷
+				}
 
-						if (date.value === "") {
-							alert("請填寫完整！");
-							return; //先中斷
-						}
+				localStorage.setItem('bookingData', JSON.stringify(bookingObj)); //將選擇的空間名稱存入localStorage
+				setTimeout("location.href='contact-reservation03.html'", 1); // 1秒後跳轉頁面
 
-						bookingData = response.data;
-						alert("填寫成功！");
-						date.value = ""; //清空欄位
-						seatNum.value = "1號座位";
-
-						setTimeout("location.href='contact-reservation03.html'", 1); // 1秒後跳轉頁面
-
-					})
-					.catch(function (error) {
-						console.log(error);
-					});
 			})
 
 		}
