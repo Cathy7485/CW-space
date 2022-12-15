@@ -121,25 +121,24 @@
 			const company = document.querySelector("#reserve-form .company");
 			const phone = document.querySelector("#reserve-form .phone");
 			const email = document.querySelector("#reserve-form .email");
-			const bookingObj = JSON.parse(localStorage.getItem('bookingData')); //從localStorage取出bookingData再轉成obj
+			
 			
 			nextBtn.addEventListener("click", e => {
 				e.preventDefault(); //取消滑鼠事件
 				
-				// console.log(JSON.parse(bookingObj))
-				let bookingObj = {
-					name: name.value,
-					company: company.value,
-					phone: phone.value,
-					email: email.value
-				}
+				const bookingObj = JSON.parse(localStorage.getItem('bookingData')); //從localStorage取出bookingData再轉成obj
+
+				bookingObj.name = name.value;
+				bookingObj.company = company.value;
+				bookingObj.phone = phone.value;
+				bookingObj.email = email.value;
+
 
 				const URL = "https://json-server-vercel-cw-space.vercel.app/booking";
 				let bookingData = [];
 				axios.post(URL, bookingObj)
 					.then(function (response) {
 						bookingData = response.data;
-
 
 						if (name.value === "" || company.value === "" || phone.value === "" || email.value === "") {
 							alert("請填寫完整！");
