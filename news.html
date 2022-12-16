@@ -20,17 +20,18 @@
 		<header id="header"></header>
 		<section id="banner" class="pt-0">
 			<div class="banner-item">
-				<img src="images/news-banner.jpg" class="banner-img" alt="最新消息主視覺" />
+				<img src="images/news-banner.jpg" class="banner-img" alt="最新公告主視覺" />
 			</div>
 			<div class="banner-title">
-				<div>最新消息</div>
+				<div>News</div>
+				<div>最新公告</div>
 			</div>
 		</section>
 		<main id="main">
 			<div id="page-main">
 				<div id="news">
 					<div class="container">
-						<ul class="news-list">
+						<ul class="news-list page-news-list">
 							<div class="lds-dual-ring"></div>
 						</ul>
 					</div>
@@ -45,7 +46,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script>
-		const newsURL = "https://json-server-vercel-cw-space.vercel.app/posts";
+		const newsURL = "https://json-server-vercel-cw-space.vercel.app/posts?_sort=id&_order=desc";
 			let newsData = [];
 			axios.get(newsURL)
 				.then(function (response) {
