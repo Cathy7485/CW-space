@@ -209,8 +209,12 @@ body
 					li.nav-item
 						a.nav-link
 							color: $cz_primary-color
-							+iphone
+							+desktop
 								color: #fff
+								&:hover
+									color: $cz_primary-color
+							+iphone
+								color: #fff 
 							+phone
 								color: #fff
 	#banner
@@ -224,6 +228,9 @@ body
 			padding-top: 0
 		+phone
 			padding-top: 0
+		&.page-banner
+			+desktop
+				padding-top: 0
 		.banner-item
 			position: relative
 			width: 100%

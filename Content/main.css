@@ -575,6 +575,14 @@ body #header #navbarNav ul.navbar-nav li.nav-item a.nav-link:hover {
 body #header #navbarNav ul.navbar-nav.page-nav li.nav-item a.nav-link {
   color: #232323;
 }
+@media (max-width: 992px) {
+  body #header #navbarNav ul.navbar-nav.page-nav li.nav-item a.nav-link {
+    color: #fff;
+  }
+  body #header #navbarNav ul.navbar-nav.page-nav li.nav-item a.nav-link:hover {
+    color: #232323;
+  }
+}
 @media (max-width: 415px) {
   body #header #navbarNav ul.navbar-nav.page-nav li.nav-item a.nav-link {
     color: #fff;
@@ -606,6 +614,11 @@ body #banner {
 }
 @media (max-width: 375px) {
   body #banner {
+    padding-top: 0;
+  }
+}
+@media (max-width: 992px) {
+  body #banner.page-banner {
     padding-top: 0;
   }
 }
