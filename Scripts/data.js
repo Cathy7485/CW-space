@@ -15,7 +15,7 @@ function getPlanData(){
 	const swiperWrapper = document.querySelector("#pricing-plan .swiper-wrapper");
 	let str ="";
 	data.forEach(i=>{
-		str+= `<div class="swiper-slide">
+		str+= `<div class="swiper-slide hvr-reveal">
 					<div class="plan-item">
 						<div class="img-box">
 							<img src="${i.imgUrl}" alt="共享辦公空間">
