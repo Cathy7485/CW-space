@@ -526,6 +526,9 @@ body #header.addBg .navbar .inner .logo-link {
     min-height: auto;
   }
 }
+body #header.addBg .navbar .inner #navbarNav a.nav-link {
+  color: #fff !important;
+}
 body #header #navbarNav {
   justify-content: flex-end;
   padding: 28px;
