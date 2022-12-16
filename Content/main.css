@@ -14,6 +14,10 @@ html, body {
   transition: all 0.3s;
 }
 
+.notice {
+  color: #FFC700;
+}
+
 ::-moz-selection {
   background: rgba(208, 251, 85, 0.9);
   color: #232323;
