@@ -1113,12 +1113,15 @@ body footer .copyright {
   margin-top: 44px;
 }
 #main #space .spaceSwiper .space-item {
+  overflow: hidden;
+}
+#main #space .spaceSwiper .space-item a {
   transition: all 0.3s;
 }
-#main #space .spaceSwiper .space-item:hover {
+#main #space .spaceSwiper .space-item a:hover {
   transition: all 0.3s;
 }
-#main #space .spaceSwiper .space-item:hover img {
+#main #space .spaceSwiper .space-item a:hover img {
   transform: scale(1.1);
   transition: all 0.3s;
 }
