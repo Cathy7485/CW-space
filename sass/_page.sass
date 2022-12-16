@@ -279,9 +279,11 @@
 			margin-bottom: 80px
 			display: block
 			overflow: hidden
-			.img-outer
+			ul.img-outer
 				position: relative
 				display: block
+				min-height: 700px
+				margin-bottom: 0
 				&::before
 					content: ''
 					position: absolute
@@ -292,11 +294,13 @@
 					height: 100%
 					background: rgba(0,0,0,0.5)
 					z-index: 1
-				img
+				li
 					position: absolute
 					top: 0
 					left: 0
-					width: 100%
+					min-height: 700px
+					img
+						width: 100%
 	//空間訊息
 	#vacant
 		margin-top: 8rem

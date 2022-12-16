@@ -1877,11 +1877,13 @@ body footer .copyright {
   display: block;
   overflow: hidden;
 }
-#page-main #about-page .space-photos .img-outer {
+#page-main #about-page .space-photos ul.img-outer {
   position: relative;
   display: block;
+  min-height: 700px;
+  margin-bottom: 0;
 }
-#page-main #about-page .space-photos .img-outer::before {
+#page-main #about-page .space-photos ul.img-outer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1892,10 +1894,13 @@ body footer .copyright {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-#page-main #about-page .space-photos .img-outer img {
+#page-main #about-page .space-photos ul.img-outer li {
   position: absolute;
   top: 0;
   left: 0;
+  min-height: 700px;
+}
+#page-main #about-page .space-photos ul.img-outer li img {
   width: 100%;
 }
 #page-main #vacant {
