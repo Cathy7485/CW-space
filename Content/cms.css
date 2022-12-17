@@ -236,3 +236,34 @@ ul {
     transform: rotate(360deg);
   }
 }
+header {
+  margin-bottom: 40px;
+  background: #232323;
+}
+header .logo {
+  width: 64px;
+  height: 64px;
+}
+header .logo img {
+  width: 100%;
+}
+header a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+header a:hover {
+  color: #D0FB55;
+}
+
+#tabs {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+#tabs a.nav-link {
+  color: #232323;
+}
+#tabs a.nav-link.active {
+  background: #232323;
+  color: #fff;
+}
