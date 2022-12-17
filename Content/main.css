@@ -1961,6 +1961,24 @@ body footer .copyright {
 #page-main #about-page .space-photos ul.img-outer li img {
   width: 100%;
 }
+#page-main #about-page #icon {
+  margin-top: 80px;
+}
+#page-main #about-page #icon .box-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+#page-main #about-page #icon .outer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#page-main #about-page #icon .outer-box .icon-title {
+  margin-top: 40px;
+  margin-bottom: 44px;
+}
 #page-main #vacant {
   margin-top: 8rem;
 }
