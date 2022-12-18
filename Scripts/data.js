@@ -40,7 +40,7 @@ function getPlanData(){
 }
 
 //首頁最新消息
-const newsURL = "https://json-server-vercel-cw-space.vercel.app/posts?_limit=5";
+const newsURL = "https://json-server-vercel-cw-space.vercel.app/posts?_sort=id&_order=desc&_limit=5";
 let newsData = [];
 axios.get(newsURL)
   .then(function (response) {
