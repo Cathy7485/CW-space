@@ -252,8 +252,11 @@
 			.right-block
 				position: relative
 				color: #fff
-				background: url(../images/logo-60x60.jpg) no-repeat $cz_primary-color
+				background: url(../images/logo-60x60.jpg) no-repeat 
 				background-position: left bottom
+				+desktop
+					background-position: 12px bottom
+					padding-bottom: 40px
 				&::after
 					content: 'comfortable work space'
 					position: absolute

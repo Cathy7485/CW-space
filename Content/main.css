@@ -1903,8 +1903,14 @@ body footer .copyright {
 #page-main #about-page .about-info .right-block {
   position: relative;
   color: #fff;
-  background: url(../images/logo-60x60.jpg) no-repeat #232323;
+  background: url(../images/logo-60x60.jpg) no-repeat;
   background-position: left bottom;
+}
+@media (max-width: 992px) {
+  #page-main #about-page .about-info .right-block {
+    background-position: 12px bottom;
+    padding-bottom: 40px;
+  }
 }
 #page-main #about-page .about-info .right-block::after {
   content: "comfortable work space";
