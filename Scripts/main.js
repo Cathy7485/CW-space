@@ -123,6 +123,37 @@ var planSwiper = new Swiper("#shared-space-page .swiper.sharedSwiper", {
   centeredSlides: true,
 });
 
+//關於我們內頁，空間照片切換
+
+const gallery = document.querySelector("#space-photos");
+const spaceName = document.querySelector(".space-name");
+//監聽空間名稱區塊
+spaceName.addEventListener("click",e=>{
+	const targetClass = e.target.classList;
+	const nodeName = e.target.nodeName;
+	if(nodeName === "UL"){
+		//非目標中斷
+		return;	
+	}
+
+	const Sibling = Array.from(spaceName.children);
+	
+	if(Array.from(targetClass).includes("active")){
+		e.target.classList.remove("active");
+	}else{
+		//抓取外層ul，判斷裡面的li是否有active，有的話移除
+		Sibling.forEach(i=>{
+			const classAry = Array.from(i.classList);
+			if(classAry.includes("active")){
+				i.classList.remove("active");
+			}
+		})
+		//點擊目標的class加上active
+		e.target.classList.add("active");
+	}
+
+})
+
 
 //回頂端按鈕
 $(".toTop-Btn").click(function (e) {
