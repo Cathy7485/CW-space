@@ -126,10 +126,10 @@ var planSwiper = new Swiper("#shared-space-page .swiper.sharedSwiper", {
 //關於我們內頁，空間照片切換
 
 const gallery = document.querySelector("#space-photos");
-const spaceName = document.querySelector(".space-name");
+const spaceTitle = document.querySelector(".space-name");
 
 //監聽空間名稱區塊，點擊名稱li加active
-spaceName.addEventListener("click",e=>{
+spaceTitle.addEventListener("click",e=>{
 	const targetClass = e.target.classList;
 	const nodeName = e.target.nodeName;
 	if(nodeName === "UL"){
@@ -137,7 +137,7 @@ spaceName.addEventListener("click",e=>{
 		return;	
 	}
 
-	const Sibling = Array.from(spaceName.children);
+	const Sibling = Array.from(spaceTitle.children);
 	//判斷有無active
 	if(!Array.from(targetClass).includes("active")){
 		//抓取外層ul，判斷裡面的li是否有active，有的話移除

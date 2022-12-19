@@ -117,6 +117,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script src="Scripts/template.js"></script>
 	<script>
 	//預約日曆套件
 		$(function () {
@@ -144,8 +145,8 @@
 			}
 		];
 		//抓取空間名稱、從localStorage取的前頁選擇的空間
-		const spaceName = document.querySelector('#reserve-form .choice-space');
-		spaceName.textContent = localStorage.getItem('choiceSpace');
+		const nameTitle = document.querySelector('#reserve-form .choice-space');
+		nameTitle.textContent = localStorage.getItem('choiceSpace');
 		//依照選擇空間，渲染表單欄位
 		function render(){
 			const spaceType = document.querySelector("#reserve-form .choice-space").textContent;
@@ -172,7 +173,7 @@
 			nextBtn.addEventListener("click",e=>{
 				e.preventDefault(); //取消滑鼠事件
 				let bookingObj = {
-					space: spaceName.textContent,
+					space: nameTitle.textContent,
 					appointment: date.value,
 					seatNum: seatNum.value
 				}
@@ -188,7 +189,6 @@
 		}
 		stepTwo();
 	</script>
-	<script src="Scripts/template.js"></script>
 	<script src="Scripts/main.js"></script>
 </body>
 
