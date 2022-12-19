@@ -127,7 +127,8 @@ var planSwiper = new Swiper("#shared-space-page .swiper.sharedSwiper", {
 
 const gallery = document.querySelector("#space-photos");
 const spaceName = document.querySelector(".space-name");
-//監聽空間名稱區塊
+
+//監聽空間名稱區塊，點擊名稱li加active
 spaceName.addEventListener("click",e=>{
 	const targetClass = e.target.classList;
 	const nodeName = e.target.nodeName;
@@ -137,10 +138,8 @@ spaceName.addEventListener("click",e=>{
 	}
 
 	const Sibling = Array.from(spaceName.children);
-	
-	if(Array.from(targetClass).includes("active")){
-		e.target.classList.remove("active");
-	}else{
+	//判斷有無active
+	if(!Array.from(targetClass).includes("active")){
 		//抓取外層ul，判斷裡面的li是否有active，有的話移除
 		Sibling.forEach(i=>{
 			const classAry = Array.from(i.classList);
@@ -150,6 +149,21 @@ spaceName.addEventListener("click",e=>{
 		})
 		//點擊目標的class加上active
 		e.target.classList.add("active");
+
+		//大圖連動
+		//抓取li名稱有active的index
+		Sibling.forEach((item,index)=>{
+			const className = item.getAttribute("class");
+			if(className === "active"){
+				let nameIndex = index;
+
+				const liList = Array.from(gallery.children); //空間照片
+				liList.forEach((item,index)=>{
+					item.classList.remove("active"); //移除目前li有active
+					liList[nameIndex].classList.add("active"); // 針對點擊標題取得的index，加上active
+				})
+			}
+		});
 	}
 
 })
