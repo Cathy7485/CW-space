@@ -178,8 +178,13 @@ body
 							height: 75px
 							min-height: auto
 					#navbarNav
-						a.nav-link
-							color: #fff !important
+						ul.page-nav
+							li.nav-item
+								a.nav-link
+									color: #fff
+									&:hover
+										color: $cz_primary-color
+
 		#navbarNav
 			justify-content: flex-end
 			padding: 28px

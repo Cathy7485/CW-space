@@ -526,8 +526,11 @@ body #header.addBg .navbar .inner .logo-link {
     min-height: auto;
   }
 }
-body #header.addBg .navbar .inner #navbarNav a.nav-link {
-  color: #fff !important;
+body #header.addBg .navbar .inner #navbarNav ul.page-nav li.nav-item a.nav-link {
+  color: #fff;
+}
+body #header.addBg .navbar .inner #navbarNav ul.page-nav li.nav-item a.nav-link:hover {
+  color: #232323;
 }
 body #header #navbarNav {
   justify-content: flex-end;
