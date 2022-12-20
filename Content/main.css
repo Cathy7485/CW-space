@@ -1467,7 +1467,7 @@ body footer .copyright {
 }
 #page-main.space-box .tab, #page-main.contact-box .tab {
   position: relative;
-  z-index: 18;
+  z-index: 5;
 }
 #page-main.space-box .tab ul, #page-main.contact-box .tab ul {
   padding-left: 0;
