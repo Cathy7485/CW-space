@@ -5,6 +5,7 @@
 	transition: all 0.3s
 	&.space-box,&.contact-box
 		position: relative
+		//上方頁籤
 		.tab
 			position: relative
 			z-index: 5
@@ -16,6 +17,9 @@
 				justify-content: center
 				align-items: center
 				border-bottom: 1px solid #000
+				+tablet-potiait
+					justify-content: flex-start
+					overflow: scroll
 				li
 					width: 20%
 					border-top: 1px solid $cz_gray02
@@ -43,13 +47,17 @@
 						+tablet-lanscape
 							padding: 14px
 						+iphone
-							padding: 4px
+							padding: 12px
 			&.space-tab
 				li
 					width: 20%
+					+iphone
+						min-width: 140px
 			&.contact-tab
 				li
 					width: 40%
+					+iphone
+						min-width: 120px
 		//環境簡介
 		.info-box
 			position: relative
@@ -97,6 +105,11 @@
 				+wide-1640
 					top: -40px
 					height: 540px
+				+desktop
+					top: -32px
+					height: 420px
+				+iphone	
+					height: 420px
 			.space-title
 				font-size: 1.5rem
 				font-weight: 600
@@ -193,7 +206,6 @@
 				margin-right: 0
 			+phone
 				margin-right: 0
-			
 			.shared-next
 				top: initial
 				left: auto
@@ -368,6 +380,8 @@
 			margin-top: 5rem
 		+desktop-992
 			margin-top: 4rem
+		+iphone
+			margin-top: 6rem
 		.title-bar
 			margin-bottom: 5rem
 			display: flex
@@ -415,10 +429,14 @@
 				padding: 10px	20px
 				background: $cz_primary-color
 				color: #fff
+				+iphone
+					bottom: -12px
 			.seating-title
 				position: absolute
 				right: 20px
 				bottom: 20px
+				+iphone
+					bottom: 0
 		#office-page-period
 			.office-type-name
 				display: block
@@ -487,6 +505,8 @@
 			position: relative
 			margin-top: 108px
 			margin-bottom: 108px
+			+iphone
+				align-items: flex-start
 			&::after
 				content: ""
 				display: block
@@ -504,6 +524,7 @@
 					width: calc(100% - 120px)
 				+iphone
 					width: calc(100% - 100px)
+					top: calc(100% - 100px)
 			li.step-item
 				display: block
 				margin: 0 auto
@@ -525,12 +546,19 @@
 				.step-text
 					display: block
 					margin-top: 32px
+					+iphone
+						max-width: 78px
+						font-size: 1rem
 	// 聯絡我們-預約表單
 	#reserve-form
 		font-size: 1.125rem
 		.choice-space
 			color: $cz_gray04
 			font-size: 1rem
+			+iphone
+				margin-top: 8px
+				display: block
+				text-align: left
 		dl.form-list
 			display: flex
 			justify-content: space-between
@@ -540,7 +568,9 @@
 			border-top: solid 1px $cz_gray02
 			margin-bottom: 0
 			&:nth-child(odd)
-				background: $cz_gray01
+				position: relative
+				background: lighten($cz_gray01,5% )
+				z-index: 0
 			&:last-of-type
 				border-bottom: solid 1px $cz_gray02
 			&:hover
@@ -548,6 +578,10 @@
 			&.select
 				border: solid 3px $cz_secondary-color
 				transition: all 0.3s
+			&.option
+				+iphone
+					justify-content: center
+					padding: 32px 28px
 			.form-title
 				min-width: 120px
 				width: 20%
@@ -581,6 +615,9 @@
 						width: 367px
 						height: 180px
 						overflow: hidden
+						+iphone
+							width: 100%
+							height: auto
 						img
 							width: 100%
 							object-fit: contain
