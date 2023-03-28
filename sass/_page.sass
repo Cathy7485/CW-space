@@ -8,6 +8,7 @@
 		//上方頁籤
 		.tab
 			position: relative
+			margin-bottom: 74px
 			z-index: 5
 			ul
 				padding-left: 0
@@ -59,57 +60,31 @@
 					+iphone
 						min-width: 120px
 		//環境簡介
+		.box-bg
+			position: absolute
+			top: 0
+			left: 0	
+			width: 100%
+			height: 100%
+			display: block
+			background: #fff
+			z-index: 2
 		.info-box
 			position: relative
-			margin-top: 7rem
-			padding-left: 300px
+			max-width: 380px
+			margin: 0 100px 0 auto
 			background: #fff
 			transition: all 0.3s
 			z-index: 5
-			+wide-1720
-				padding-left: 160px
-			+wide-1640
-				margin-top: 4rem
-				padding-left: 150px
-			+wide-1440
-				margin-top: 4rem
-				padding-left: 70px
 			+wide-1366
-				margin-top: 7rem
-				padding-left: 120px
+				margin-right: 50px
 			+wide
-				margin-top: 4rem
-				padding-left: 60px
-			+desktop-992
-				margin-top: 2rem
-				padding-left: 60px
-			+desktop
-				margin-top: 2rem
-				padding-left: 60px
-			+iphone
-				margin-top: 4rem
-				padding-left: 0
-			+phone
-				margin-top: 4rem
-				padding-left: 0
-			&::after
-				content: ''
-				position: absolute
-				top: -50px
-				right: 0
-				background: #fff
-				display: block
-				width: 105%
-				height: 500px
-				z-index: -1
-				+wide-1640
-					top: -40px
-					height: 540px
-				+desktop
-					top: -32px
-					height: 420px
-				+iphone	
-					height: 420px
+				margin-right: 20px
+			+desktop-992 
+				margin: 0 20px
+			+tablet-lanscape 
+				max-width: 450px
+				margin: 0 auto
 			.space-title
 				font-size: 1.5rem
 				font-weight: 600
@@ -152,8 +127,6 @@
 						margin-right: 28px
 						+wide
 							margin-right: 10px
-						+desktop-992
-							margin-right: 10px
 						+desktop
 							margin-right: 8px
 						+iphone
@@ -169,8 +142,6 @@
 						background: $cz_secondary-color
 						+desktop-992
 							+block-btn(10px,24px)
-						+desktop
-							+block-btn(10px,24px)
 					.visit-btn
 						+block-btn(13px,43px)
 						background: $cz_gray01
@@ -180,31 +151,14 @@
 						+desktop-992
 							+block-btn(10px,24px)
 							background: $cz_gray01
-						+desktop
-							+block-btn(10px,24px)
-							background: $cz_gray01
 		//共享空間
 		#shared-space-page
 			position: relative
-			margin-top: 74px
+			height: 431px
 			margin-right: 400px
-			+wide-1720
-				margin-right: 320px
-			+wide-1640
-				margin-right: 178px
-			+wide-1440
-				margin-right: 190px
-			+wide-1366
-				margin-right: 60px
-			+wide
-				margin-right: 60px
-			+desktop-992
-				margin-right: 0
-			+desktop
-				margin-right: 0
-			+iphone
-				margin-right: 0
-			+phone
+			+wide-1440 
+				margin-right: 200px
+			+wide 
 				margin-right: 0
 			.shared-next
 				top: initial
@@ -389,8 +343,6 @@
 			align-items: center
 			+desktop-992
 				margin-bottom: 2rem
-			+desktop
-				margin-bottom: 2rem
 			.title
 				display: inline-block
 				font-size: 1.5rem
@@ -406,11 +358,8 @@
 			padding-right: 20px
 			+iphone
 				padding-right: 0px
-			+phone
-				padding-right: 0px
 		#seating
 			width: 100%
-			// padding: 0 20px
 			position: relative
 			.seating-img
 				width: 100%
@@ -446,7 +395,6 @@
 	#fqa
 		margin-top: 0
 		padding-top: 0
-
 	//最新公告
 	#news
 		background: #fff
@@ -455,7 +403,6 @@
 		.page-news-list
 			li:nth-child(even)
 				background: #FAFAFA
-
 	// 聯絡我們-預約_參觀
 	.reserve-list
 		margin-top: 4rem
@@ -685,5 +632,3 @@
 		.right-block
 			iframe
 				min-height: 300px
-		
-			
