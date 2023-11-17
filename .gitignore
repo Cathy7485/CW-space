@@ -1,6 +1,5 @@
 # 檔案名稱 .gitignore
 node_modules/
-sass/
+unuse/
 
-# 忽略所有附檔名是 .sass 的檔案
-*.sass
+# 忽略所有附檔名 的檔案

@@ -1,0 +1,194 @@
+//環境空間
+#space
+	.swiper
+		width: 100%
+		height: 100%
+	.swiper-slide
+		text-align: center
+		font-size: 18px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.swiper-button-prev,.swiper-button-next
+		color: #fff
+
+//方案介紹
+#pricing-plan
+	.swiper
+		width: 100%
+		height: 100%
+	.swiper-slide
+		text-align: center
+		font-size: 18px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.swiper-btn
+		+iphone
+			display: none
+	.swiper-button-prev
+		left: -24px
+		color: $cz_gray04
+	.swiper-button-next
+		right: -24px
+		color: $cz_gray04
+
+//共享辦公空間內頁
+#shared-space-page
+	.swiper
+		width: 100%
+		height: 100%
+		overflow: initial
+	.swiper-slide
+		text-align: center
+		font-size: 18px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.swiper-btn
+		+iphone
+			display: none
+	.swiper-button-prev
+		left: 14%
+		color: $cz_gray04
+	.swiper-button-next
+		right: 14%
+		color: $cz_gray04
+
+//預約功能行事曆
+#vacant
+	.zabuto_calendar
+		tr
+			border: none
+		td
+			border: none
+	.calendar-month-header
+		position: relative
+		td
+			border: none
+			background: transparent
+		td:nth-child(2)
+			position: relative
+			text-align: left
+			span
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: -70px
+				+iphone
+					left: -50px
+		.calendar-month-navigation
+			height: 44px
+			.glyphicon-chevron-left
+				background: url(../images/calendar-left-btn.png) no-repeat
+				width: 24px
+				height: 24px
+				position: absolute
+				right: 62px
+				top: 17px
+			.glyphicon-chevron-right
+				background: url(../images/calendar-right-btn.png) no-repeat
+				width: 24px
+				height: 24px
+	.calendar-dow-header
+		border-top: transparent
+		border-bottom: solid 1px $primary
+		th
+			background-color: transparent
+			font-weight: 400
+	.calendar-dow
+		td
+			&:first-child
+				background: $cz_gray02
+				color: $cz_gray03
+			&:last-child
+				background: $cz_gray02
+				color: $cz_gray03
+			.day
+				padding-top: 10px
+				padding-bottom: 0px
+				margin-bottom: 10px
+			.badge
+				&.badge-today
+					border-radius: 0
+					color: #000
+					border-bottom: solid 6px $yellow
+					width: 100%
+					background: transparent
+					font-size: 0.9rem
+					font-weight: 400
+					padding-bottom: 8px
+
+	.legend
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 82px
+		background: $cz_gray01
+		padding: 5px
+		+iphone
+			padding: 5px 0
+			margin-bottom: 20px
+	.legend-block
+		font-size: 1rem	
+		width: 30%
+		display: flex
+		justify-content: space-around
+		align-items: center
+		ul.legend 
+			margin: 0
+		li
+			width: 30px
+			height: 30px	
+			border-radius: 50%
+			margin: 0
+			&.vacancy-label
+				background: $secondary
+			&.full-label
+				background: $cz_gray02
+			&.selected-label
+				background: $yellow
+		span
+			font-size: 1rem
+			color: $primary
+
+
+.hvr-reveal 
+	display: inline-block
+	vertical-align: middle
+	transform: perspective(1px) translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	position: relative
+	overflow: hidden
+	&::before 
+		content: ""
+		position: absolute
+		z-index: -1
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		border: 0px solid $secondary
+		transition-property: border-width
+		transition-duration: 0.1s
+		transition-timing-function: ease-out
+		z-index: 1
+	&:hover
+		&::before
+			transform: translateY(0)
+			border-width: 4px

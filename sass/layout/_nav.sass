@@ -1,0 +1,60 @@
+.navbar
+	justify-content: space-between
+	align-items: center
+	padding-top: inherit
+	padding-bottom: 0
+	.inner
+		padding-left: 0
+		align-items: flex-start
+		transition: all 0.3s cubic-bezier(.65,0,.35,1)
+		+desktop
+			padding-right: 0
+			align-items: center
+				
+
+	button.navbar-toggler
+		border: none
+		box-shadow: none
+		.navbar-toggler-icon
+			width: 48px
+			height: 48px
+			background-image: url(../images/navbar-toggler-icon.svg)
+			background-size: contain
+
+#navbarNav
+	justify-content: flex-end
+	padding: 28px
+	+desktop
+		background: rgba(0,0,0,0.8)
+	li.nav-item
+		margin-right: 12px
+	a.nav-link
+		padding: 10px 22px
+		font-weight: 600
+		color: #fff
+		transition: all 0.3s
+		&:hover
+			background: $secondary
+			color: $primary
+			transition: all 0.3ss
+	.page-nav
+		a.nav-link
+			color: $primary
+			+desktop
+				color: #fff
+				&:hover
+					color: $primary
+			+iphone
+				color: #fff
+
+.addBg
+	.inner
+		height: 100px
+		transition: all 0.3s cubic-bezier(.65,0,.35,1)
+		+tablet-landscape
+			height: initial
+					
+	a.nav-link
+		color: #fff
+		&:hover
+			color: $primary

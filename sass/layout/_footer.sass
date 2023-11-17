@@ -1,0 +1,89 @@
+footer
+	position: relative
+	background: $primary
+	padding: 8rem 0 6rem
+	font-size: 1rem
+	color: #fff
+	overflow: hidden
+	z-index: 5
+	
+	.left
+		+tablet-landscape
+			order: 2
+			
+		ul.info
+			margin: 0
+			padding: 0
+			+tablet-landscape
+				margin-left: 44px
+		li
+			margin-bottom: 18px
+			+tablet-landscape
+				margin-bottom: 10px
+		a
+			color: #fff
+	.right
+		position: relative
+		text-align: right
+		+tablet-landscape
+			order: 1
+			margin-bottom: 6.8rem
+		+tablet-portrait
+			margin-bottom: 5rem
+
+.footer-logo
+	display: inline-block
+	width: 243px
+	height: 80px
+	margin-top: 56px
+	margin-right: 10px
+	+desktop
+		margin-top: 46px
+		margin-bottom: initial
+		margin-right: initial
+	+tablet-landscape
+		margin-top: 0
+	img
+		width: 100%
+
+.toTop-Btn
+	position: absolute
+	top: 0
+	left: 0
+	font-size: 0.8rem
+	color: $primary
+	width: 90px
+	height: 90px
+	background: url(../images/angle-up.svg) no-repeat #fff
+	background-size: 45px 45px
+	background-position: center 14px
+	transition: all 0.3s
+	&:hover
+		background-color: $secondary
+		transition: all 0.3s
+	span
+		position: absolute
+		left: 50%
+		bottom: 20px
+		transform: translateX(-50%)
+		display: inline-block
+
+.copyright
+	display: inline-block
+	position: absolute
+	margin: 0
+	top: 256px
+	left: -125px
+	transform: rotate(90deg)
+	font-size: 0.8rem
+	color: rgba(#fff,50%)
+	+wide
+		top: 250px
+	+tablet-landscape
+		top: initial
+		bottom: 172px
+		left: -126px
+	+iphone
+		top: initial
+		bottom: 25%
+		left: -126px

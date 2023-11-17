@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700&display=swap')
+
+html,body
+	width: 100%
+	margin: 0
+	font-family: 'Noto Sans TC','Microsoft JhengHei', sans-serif
+	font-size: 1rem
+	position: relative
+	z-index: 1
+	overflow-x: hidden
+
+*
+	transition: all 0.3s
+
+//反選樣式
+::-moz-selection 
+	background: rgba($secondary,0.9)
+	color: $primary
+::selection 
+	background: rgba($secondary,0.9)
+	color: $primary
+
+a
+	text-decoration: none
+	color: #222
+	&:hover
+		color: $primary
+
+input[type="radio"]
+	visibility: hidden
+
+ul
+	list-style: none
+	padding-left: 0

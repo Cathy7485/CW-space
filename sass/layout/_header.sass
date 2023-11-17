@@ -1,0 +1,68 @@
+#header
+	position: fixed
+	display: block
+	width: 100%
+	z-index: 8
+.logo
+	position: relative
+	width: 154px
+	min-height: 173px
+	padding: 0
+	margin-top: 0
+	display: inline-block
+	background: url(../images/logo.jpg) no-repeat
+	background-size: contain
+	background-position: top left
+	transition: all 0.3s cubic-bezier(.65,0,.35,1)
+	text-indent: -9999px
+	+wide
+		width: 100px
+		height: 100px
+		background: url(../images/logo-sm.jpg) no-repeat
+		background-position: center
+		min-height: initial
+	+desktop
+		width: 75px
+		height: 75px
+		min-height: 75px
+	+tablet-landscape
+		min-height: initial
+
+	.logo-link
+		border: 0
+		display: block
+		width: 154px
+		height: 173px
+		text-indent: -9999px
+		+wide
+			width: 100px
+			height: 100px
+		+desktop
+			width: 75px
+			height: 75px
+	
+.addBg
+	background: rgba(0,0,0,0.3)
+	height: 100px
+	transition: all 0.3s
+	+tablet-landscape
+		min-height: initial
+		height: 75px
+	.logo-link
+		width: 100px
+		height: 100px
+		+tablet-landscape
+			width: 75px
+			height: 75px
+			min-height: auto
+	.logo
+		width: 100px
+		height: 100px
+		min-height: 100px
+		background: url(../images/logo-sm.jpg) no-repeat
+		background-size: contain
+		transition: all 0.3s cubic-bezier(.65,0,.35,1)
+		+tablet-landscape
+			width: 75px
+			height: 75px
+			min-height: 75px
