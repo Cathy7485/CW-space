@@ -82,7 +82,9 @@
   border: 1px solid #546058;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .form-label {
@@ -205,8 +207,10 @@ ul {
   position: relative;
   width: 100%;
   max-height: 500px;
-  object-fit: cover;
-  object-position: center 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 65%;
+     object-position: center 65%;
   transition: all 0.3s;
   z-index: -1;
 }
@@ -236,14 +240,17 @@ ul {
 .banner-img {
   width: 100%;
   max-height: 570px;
-  object-fit: cover;
-  object-position: center 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 35%;
+     object-position: center 35%;
   transition: all 0.3s;
 }
 @media (max-width: 415px) {
   .banner-img {
     height: 570px;
-    object-position: 90% 50%;
+    -o-object-position: 90% 50%;
+       object-position: 90% 50%;
   }
 }
 
@@ -619,6 +626,10 @@ footer .right {
 #main {
   position: relative;
   padding-top: 3rem;
+  padding-top: 1rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
 }
 #main .title-box {
   position: relative;
@@ -700,14 +711,6 @@ footer .right {
 }
 #main .title-box .title-btn {
   position: relative;
-}
-
-#main {
-  position: relative;
-  padding-top: 1rem;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
 }
 
 #about {
@@ -802,13 +805,17 @@ footer .right {
 #pricing-plan .img-box {
   width: 100%;
   height: 244px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   overflow: hidden;
 }
 #pricing-plan .img-box img {
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -1446,8 +1453,10 @@ footer .right {
 #about-page .space-photos ul.img-outer li img {
   width: 100vw;
   max-height: 700px;
-  object-fit: cover;
-  object-position: center center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 #about-page ul.space-name {
   position: absolute;
@@ -1879,8 +1888,10 @@ footer .right {
 }
 #reserve-form.step-one dl.form-list .left .space-img img {
   width: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 #reserve-form.step-one dl.form-list .right .space-name {
   margin-top: 32px;
@@ -1996,7 +2007,8 @@ footer .right {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #space .swiper-button-prev, #space .swiper-button-next {
   color: #fff;
@@ -2017,7 +2029,8 @@ footer .right {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 415px) {
   #pricing-plan .swiper-btn {
@@ -2049,7 +2062,8 @@ footer .right {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 415px) {
   #shared-space-page .swiper-btn {
@@ -2235,4 +2249,4 @@ footer .right {
   100% {
     transform: rotate(360deg);
   }
-}
+}/*# sourceMappingURL=main.css.map */
