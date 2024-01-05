@@ -6,15 +6,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		CW-space共享辦公空間
-	</title>
+	<title>CW-space共享辦公空間</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
-	
+
 </head>
 
 <body>
@@ -84,7 +82,7 @@
 									座位選擇<span class="notice ms-2">*</span>
 								</dt>
 								<dd class="form-info detail-info">
-									<select type="text" class="form-input form-select seat-num w-100" >
+									<select type="text" class="form-input form-select seat-num w-100">
 										<option value="1">1號座位</option>
 										<option value="2">2號座位</option>
 										<option value="3">3號座位</option>
@@ -119,7 +117,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script src="Scripts/template.js"></script>
 	<script>
-	//預約日曆套件
+		//預約日曆套件
 		$(function () {
 			$("#date-input").datepicker({ dateFormat: 'yy-mm-dd' });
 		});
@@ -148,12 +146,12 @@
 		const nameTitle = document.querySelector('#reserve-form .choice-space');
 		nameTitle.textContent = localStorage.getItem('choiceSpace');
 		//依照選擇空間，渲染表單欄位
-		function render(){
+		function render() {
 			const spaceType = document.querySelector("#reserve-form .choice-space").textContent;
 			//篩選資料
 			let filterData = [];
-			formData.filter(i => { 
-				if(spaceType === i.type){
+			formData.filter(i => {
+				if (spaceType === i.type) {
 					console.log(i.type)
 					const dateInfo = document.querySelector(".date-info");
 					const detailTitle = document.querySelector(".detail-title");
@@ -170,8 +168,8 @@
 			const date = document.querySelector("#reserve-form .date");
 			const seatNum = document.querySelector("#reserve-form .seat-num");
 			const nextBtn = document.querySelector("#reserve-form .next-btn");
-			nextBtn.addEventListener("click",e=>{
-				e.preventDefault(); //取消滑鼠事件
+			nextBtn.addEventListener("click", e => {
+				e.preventDefault();
 				let bookingObj = {
 					space: nameTitle.textContent,
 					appointment: date.value,
@@ -180,11 +178,11 @@
 
 				if (date.value === "") {
 					alert("請填寫完整！");
-					return; //先中斷
+					return;
 				}
 
 				localStorage.setItem('bookingData', JSON.stringify(bookingObj)); //將選擇的空間名稱存入localStorage
-				setTimeout("location.href='contact-reservation03.html'", 1); // 1秒後跳轉頁面
+				setTimeout("location.href='contact-reservation03.html'", 1);
 			})
 		}
 		stepTwo();

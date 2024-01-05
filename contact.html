@@ -6,9 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		CW-space共享辦公空間
-	</title>
+	<title>CW-space共享辦公空間</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -75,7 +73,8 @@
 								<dt class="form-title">留言訊息<span class="notice ms-2">*</span>
 								</dt>
 								<dd class="form-info">
-									<textarea type="text" name="comm" rows="6" cols="40" maxlength="300" class="comment form-input w-100" placeholder="請輸入留言內容"></textarea>
+									<textarea type="text" name="comm" rows="6" cols="40" maxlength="300"
+										class="comment form-input w-100" placeholder="請輸入留言內容"></textarea>
 								</dd>
 							</dl>
 							<div class="btn-block">
@@ -96,56 +95,56 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script>
 		//線上留言
-			//送出按鍵監聽
-			function comment() {
-				const contactSubmit = document.querySelector("#contact-form .submit-btn");
-				contactSubmit.addEventListener("click", addComment);
-				function addComment() {
-					const name = document.querySelector("#contact-form .name");
-					const companyName = document.querySelector("#contact-form .company-name");
-					const phone = document.querySelector("#contact-form .phone");
-					const email = document.querySelector("#contact-form .email");
-					const comment = document.querySelector("#contact-form .comment");
+		//送出按鍵監聽
+		function comment() {
+			const contactSubmit = document.querySelector("#contact-form .submit-btn");
+			contactSubmit.addEventListener("click", addComment);
+			function addComment() {
+				const name = document.querySelector("#contact-form .name");
+				const companyName = document.querySelector("#contact-form .company-name");
+				const phone = document.querySelector("#contact-form .phone");
+				const email = document.querySelector("#contact-form .email");
+				const comment = document.querySelector("#contact-form .comment");
 
-					if (
-						name.value == "" ||
-						companyName.value == "" ||
-						phone.value == "" ||
-						email.value == "" ||
-						comment.value == ""
-					) {
-						alert("請填寫表單完整！");
-						return;
-					};
+				if (
+					name.value == "" ||
+					companyName.value == "" ||
+					phone.value == "" ||
+					email.value == "" ||
+					comment.value == ""
+				) {
+					alert("請填寫表單完整！");
+					return;
+				};
 
 
-					let obj = {
-						name: name.value,
-						company: companyName.value,
-						phone: phone.value,
-						email: email.value,
-						content: comment.value
-					}
-
-					const URL = "https://json-server-vercel-cw-space.vercel.app/comments";
-					let orderData = [];
-					axios.post(URL, obj)
-						.then(function (response) {
-							orderData = response.data;
-							alert("留言成功");
-							name.value = "";
-							companyName.value = "";
-							phone.value = "";
-							email.value = "";
-							comment.value = "";
-
-						})
-						.catch(function (error) {
-							console.log(error);
-						});
+				let obj = {
+					name: name.value,
+					company: companyName.value,
+					phone: phone.value,
+					email: email.value,
+					content: comment.value
 				}
+
+				const URL = "https://json-server-vercel-cw-space.vercel.app/comments";
+				let orderData = [];
+				axios.post(URL, obj)
+					.then(function (response) {
+						orderData = response.data;
+						alert("留言成功");
+						name.value = "";
+						companyName.value = "";
+						phone.value = "";
+						email.value = "";
+						comment.value = "";
+
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
 			}
-			comment();
+		}
+		comment();
 	</script>
 	<script src="Scripts/template.js"></script>
 	<script src="Scripts/main.js"></script>

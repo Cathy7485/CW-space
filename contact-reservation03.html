@@ -6,9 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		CW-space共享辦公空間
-	</title>
+	<title>CW-space共享辦公空間</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -118,11 +116,11 @@
 			const company = document.querySelector("#reserve-form .company");
 			const phone = document.querySelector("#reserve-form .phone");
 			const email = document.querySelector("#reserve-form .email");
-			
-			
+
+
 			nextBtn.addEventListener("click", e => {
 				e.preventDefault(); //取消滑鼠事件
-				
+
 				const bookingObj = JSON.parse(localStorage.getItem('bookingData')); //從localStorage取出bookingData再轉成obj
 
 				bookingObj.name = name.value;
@@ -142,7 +140,7 @@
 							return; //先中斷
 						}
 						alert("填寫成功！");
-						 //清空欄位
+						//清空欄位
 						name.value = "";
 						company.value = "";
 						phone.value = "";
@@ -154,7 +152,7 @@
 						console.log(error);
 					});
 			})
-		
+
 		}
 		stepThree();
 	</script>

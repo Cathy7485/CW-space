@@ -6,9 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		CW-space共享辦公空間
-	</title>
+	<title>CW-space共享辦公空間</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -49,20 +47,20 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script>
 		const fqaURL = "https://json-server-vercel-cw-space.vercel.app/fqa";
-			let fqaData = [];
-			axios.get(fqaURL)
-				.then(function (response) {
-					fqaData = response.data;
-					fqa();
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
-			function fqa() {
-				const accordionItem = document.querySelector("#fqa .fqu-list");
-				let str = "";
-				fqaData.forEach((i, index) => {
-					str += `
+		let fqaData = [];
+		axios.get(fqaURL)
+			.then(function (response) {
+				fqaData = response.data;
+				fqa();
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+		function fqa() {
+			const accordionItem = document.querySelector("#fqa .fqu-list");
+			let str = "";
+			fqaData.forEach((i, index) => {
+				str += `
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="flush-heading-${index}">
 					<a class="accordion-button collapsed" href="#!" type="button" data-bs-toggle="collapse"
@@ -78,10 +76,10 @@
 				</div>
 			</div>
 		`
-				})
-				accordionItem.innerHTML = str;
-			}
-			fqa();
+			})
+			accordionItem.innerHTML = str;
+		}
+		fqa();
 	</script>
 	<script src="Scripts/template.js"></script>
 	<script src="Scripts/main.js"></script>
