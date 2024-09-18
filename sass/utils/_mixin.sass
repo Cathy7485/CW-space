@@ -126,3 +126,12 @@
 		background: darken($outlineColor,5% )
 		color: #fff !important
 		transition: 0.3s
+
+// 超過行數刪節號
+@mixin multiline-ellipsis($num)
+	overflow: hidden
+	text-overflow: ellipsis
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	-webkit-line-clamp: $num
+	box-sizing: border-box

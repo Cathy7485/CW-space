@@ -1,7 +1,5 @@
 //header 往下滑動加樣式
-//window監聽scroll事件：
 window.addEventListener('scroll', addBackground);
-//選取所有的image元素：
 const header = document.querySelector('#header');
 function addBackground(e) {
   //條件一：
@@ -13,16 +11,14 @@ function addBackground(e) {
   const imageOnWindow = window.scrollY < imageBottom;
 
   if (imageOnWindow && bgAppear) {
-    //不符合出現條件，移除active此class
     header.classList.remove('addBg');
   } else {
-    //符合出現條件，加上active此class
     header.classList.add('addBg');
   };
 };
 addBackground();
 
-// swiper 插件
+// swiper 套件
 //環境空間
 var spaceSwiper = new Swiper("#space .swiper.spaceSwiper", {
   slidesPerView: 3,
@@ -65,9 +61,9 @@ var spaceSwiper = new Swiper("#space .swiper.spaceSwiper", {
 });
 //方案介紹
 var planSwiper = new Swiper("#pricing-plan .swiper.planSwiper", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   slidesPerGroup: 1,
-  spaceBetween: 50,
+  spaceBetween: 0,
   loop: true,
   loopFillGroupWithBlank: true,
   followFinger: false,
@@ -93,11 +89,11 @@ var planSwiper = new Swiper("#pricing-plan .swiper.planSwiper", {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 10,
+      spaceBetween: 8,
     },
     1024: {
       slidesPerView: 2,
-      spaceBetween: 50,
+      spaceBetween: 24,
     },
   },
 });
@@ -129,42 +125,42 @@ const gallery = document.querySelector("#space-photos");
 const spaceTitle = document.querySelector(".space-name");
 
 //監聽空間名稱區塊，點擊名稱li加active
-spaceTitle.addEventListener("click",e=>{
-	const targetClass = e.target.classList;
-	const nodeName = e.target.nodeName;
-	if(nodeName === "UL"){
-		//非目標中斷
-		return;	
-	}
+spaceTitle.addEventListener("click", e => {
+  const targetClass = e.target.classList;
+  const nodeName = e.target.nodeName;
+  if (nodeName === "UL") {
+    //非目標中斷
+    return;
+  }
 
-	const Sibling = Array.from(spaceTitle.children);
-	//判斷有無active
-	if(!Array.from(targetClass).includes("active")){
-		//抓取外層ul，判斷裡面的li是否有active，有的話移除
-		Sibling.forEach(i=>{
-			const classAry = Array.from(i.classList);
-			if(classAry.includes("active")){
-				i.classList.remove("active");
-			}
-		})
-		//點擊目標的class加上active
-		e.target.classList.add("active");
+  const Sibling = Array.from(spaceTitle.children);
+  //判斷有無active
+  if (!Array.from(targetClass).includes("active")) {
+    //抓取外層ul，判斷裡面的li是否有active，有的話移除
+    Sibling.forEach(i => {
+      const classAry = Array.from(i.classList);
+      if (classAry.includes("active")) {
+        i.classList.remove("active");
+      }
+    })
+    //點擊目標的class加上active
+    e.target.classList.add("active");
 
-		//大圖連動
-		//抓取li名稱有active的index
-		Sibling.forEach((item,index)=>{
-			const className = item.getAttribute("class");
-			if(className === "active"){
-				let nameIndex = index;
+    //大圖連動
+    //抓取li名稱有active的index
+    Sibling.forEach((item, index) => {
+      const className = item.getAttribute("class");
+      if (className === "active") {
+        let nameIndex = index;
 
-				const liList = Array.from(gallery.children); //空間照片
-				liList.forEach((item,index)=>{
-					item.classList.remove("active"); //移除目前li有active
-					liList[nameIndex].classList.add("active"); // 針對點擊標題取得的index，加上active
-				})
-			}
-		});
-	}
+        const liList = Array.from(gallery.children); //空間照片
+        liList.forEach((item, index) => {
+          item.classList.remove("active"); //移除目前li有active
+          liList[nameIndex].classList.add("active"); // 針對點擊標題取得的index，加上active
+        })
+      }
+    });
+  }
 
 })
 
