@@ -1055,6 +1055,7 @@ footer .right {
   padding-top: 60px;
   padding-bottom: 60px;
   transition: all 0.3s;
+  overflow: hidden;
 }
 #page-main .tab {
   position: relative;
@@ -1065,6 +1066,7 @@ footer .right {
   padding-left: 0;
   margin: 0;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1078,6 +1080,7 @@ footer .right {
 }
 #page-main .tab li {
   width: 20%;
+  height: 100%;
   border-top: 1px solid #E7E7E7;
   border-left: 1px solid #E7E7E7;
 }
@@ -1085,11 +1088,14 @@ footer .right {
   border-right: 1px solid #E7E7E7;
 }
 #page-main .tab li a.tab-item {
-  display: block;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
   color: #232323;
   font-weight: 600;
-  padding: 18px 64px;
 }
 #page-main .tab li a.tab-item.active {
   background: #232323;
@@ -1098,26 +1104,6 @@ footer .right {
 #page-main .tab li a.tab-item:hover {
   background: rgba(35, 35, 35, 0.8);
   color: #fff;
-}
-@media (max-width: 1200px) {
-  #page-main .tab li a.tab-item {
-    padding: 18px 60px;
-  }
-}
-@media (max-width: 992px) {
-  #page-main .tab li a.tab-item {
-    padding: 18px;
-  }
-}
-@media (max-width: 768px) {
-  #page-main .tab li a.tab-item {
-    padding: 14px;
-  }
-}
-@media (max-width: 415px) {
-  #page-main .tab li a.tab-item {
-    padding: 12px;
-  }
 }
 #page-main .tab.space-tab li {
   width: 20%;
