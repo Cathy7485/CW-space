@@ -513,7 +513,7 @@ footer .right {
 }
 
 .addBg {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   height: 100px;
   transition: all 0.3s;
 }
@@ -599,7 +599,7 @@ footer .right {
 #navbarNav a.nav-link:hover {
   background: #D0FB55;
   color: #232323;
-  transition: all 0.3ss;
+  transition: all 0.3s;
 }
 #navbarNav .page-nav a.nav-link {
   color: #232323;
@@ -628,10 +628,10 @@ footer .right {
   }
 }
 .addBg a.nav-link {
-  color: #fff;
+  color: #fff !important;
 }
 .addBg a.nav-link:hover {
-  color: #232323;
+  color: #232323 !important;
 }
 
 #main {
